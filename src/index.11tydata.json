@@ -1,0 +1,34 @@
+{
+    "questions": [
+        {
+            "question": "Why are all these notes here instead of locked away behind a pay wall in the Learning Management System?",
+            "answers": [
+                {
+                    "answer": "Because Martin values the ability to keep his notes in a plaintext format.",
+                    "correct": "false",
+                    "feedback": "that's a good reason, but it's not the only reason"
+                },
+                {
+                    "answer": "Because Martin thinks it's right for knowledge to be freely available.",
+                    "correct": "false",
+                    "feedback": "that's a good reason, but it's not the only reason"
+                },
+                {
+                    "answer": "Because Martin is fairly sure he won't get fired for giving the milk away for free without anyone needing to buy the cow.",
+                    "correct": "false",
+                    "feedback": "that's a good reason, but it's not the only reason"
+                },
+                {
+                    "answer": "Because reading these notes is **not all it takes** to learn about data visualisation and the true value is in attending class and participating in the class activities.",
+                    "correct": "false",
+                    "feedback": "that's a good reason, but it's not the only reason"
+                },
+                {
+                    "answer": "All of the above.",
+                    "correct": "true",
+                    "feedback": "It's always all of the above. Little tip for you there"
+                }
+            ]
+        }
+    ]
+}

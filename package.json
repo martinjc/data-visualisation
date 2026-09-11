@@ -1,0 +1,31 @@
+{
+  "name": "online-course-notes-11ty",
+  "version": "1.0.0",
+  "description": "a skeleton project using 11ty to generate course notes",
+  "type": "module",
+  "scripts": {
+    "clean": "node -e \"import('fs').then(fs => fs.rmSync('public', { recursive: true, force: true }))\"",
+    "start": "npm run clean && eleventy --serve",
+    "build": "npm run clean && eleventy",
+    "reinstall": "node -e \"import('fs').then(fs => fs.rmSync('node_modules', { recursive: true, force: true }))\" && npm cache verify && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinjc/online-course-notes-11ty.git"
+  },
+  "author": "Martin Chorley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinjc/online-course-notes-11ty/issues"
+  },
+  "homepage": "https://github.com/martinjc/online-course-notes-11ty#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^7.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "@tailwindcss/cli": "^4.3.3",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-footnote": "^3.0.3"
+  }
+}
