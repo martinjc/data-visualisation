@@ -24,6 +24,12 @@ In modern computer science, Stuart Card, Jock Mackinlay, and Ben Shneiderman ([1
 
 Again, here we see the idea that visualising data is not just about creating a visual representation of data, but about using that representation to support decision making and thought processes - it is not enough for our visualisation to simply represent the data in a visual fashion, it must also be effective at provoking thoughts and ideas.
 
-Stephen Few ([2014](https://www.perceptualedge.com/)) further synthesises these perspectives, describing visualisation as the use of visual representations to explore, make sense of, and communicate data. It is exactly these tasks that we will focus on throughout this course
+Stephen Few ([2014](https://www.perceptualedge.com/)) further synthesises these perspectives, describing visualisation as the use of visual representations to explore, make sense of, and communicate data. It is exactly these tasks that we will focus on throughout this course.
 
+We'll start by considering the purpose and value of visualisation. This starts with understanding the limitations of sumamry statistics: the realisation that the same summary statistics can be produced from very different data distributions and can conceal underlying structures, distributions and summary statistics. This directly leads to the notions of exploratory and explanatory visualisation, the idea that we have a dual role for visualisation in the process of data analysis and communication - firstly to explore the data to find and understand exactly those features that may not be revealed by statistical analysis alone, and then secondly to communicate these findings to an intended audience. We then add in the thought that visual communication extends beyond just the representation of numerical data and that we can use visualisation to persuade, to influence, to entertain, to bring forward abstract ideas and concepts.
 
+We'll look at the ideas of perception and human pyschology relating to visual understanding, and how these concepts can influence the visualisations we create and how they are understood and perceived by users. 
+
+We'll look at the technical aspects of data visualisation, considering the tools and techniques and priniciples that underpin the creation of effective visualisations.
+
+Along the way we will examine the societal impact of data visualisation and consider issues such as ethics, bias and misrepresentation. We'll also learn how to critically assess both our own work and the work of others, developing the reflective 'eye' for good visualisation, ensuring we can evaluate our own work and identify areas for improvement.

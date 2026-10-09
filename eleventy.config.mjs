@@ -43,8 +43,52 @@ export default function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLib);
 
   // Custom filters
+  function getOrderPath(item, itemMap) {
+    const path = [];
+    let current = item;
+    const visited = new Set();
+    while (current && !visited.has(current)) {
+      visited.add(current);
+      const order = Number(current.data?.eleventyNavigation?.order ?? current.data?.order ?? 0);
+      path.unshift(order);
+      const parentKey = current.data?.eleventyNavigation?.parent || current.data?.parent;
+      if (!parentKey || !itemMap.has(parentKey)) {
+        break;
+      }
+      current = itemMap.get(parentKey);
+    }
+    return path;
+  }
+
+  function comparePageOrder(a, b, itemMap) {
+    const pathA = getOrderPath(a, itemMap);
+    const pathB = getOrderPath(b, itemMap);
+    const len = Math.min(pathA.length, pathB.length);
+    for (let i = 0; i < len; i++) {
+      if (pathA[i] !== pathB[i]) {
+        return pathA[i] - pathB[i];
+      }
+    }
+    if (pathA.length !== pathB.length) {
+      return pathA.length - pathB.length;
+    }
+    const titleA = a.data?.title || "";
+    const titleB = b.data?.title || "";
+    return titleA.localeCompare(titleB);
+  }
+
   function sortByPageOrder(values) {
-    return values.slice().sort((a, b) => Math.sign(a.data.order - b.data.order));
+    if (!values || !Array.isArray(values)) {
+      return [];
+    }
+    const itemMap = new Map();
+    for (const item of values) {
+      const key = item.data?.eleventyNavigation?.key || item.data?.title;
+      if (key) {
+        itemMap.set(key, item);
+      }
+    }
+    return values.slice().sort((a, b) => comparePageOrder(a, b, itemMap));
   }
   eleventyConfig.addFilter("sortByPageOrder", sortByPageOrder);
 
@@ -54,6 +98,22 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode("panopto", shortcodes.insertPanopto);
   eleventyConfig.addPairedShortcode("panel", shortcodes.insertPanel);
   eleventyConfig.addPairedShortcode("accordion", shortcodes.insertAccordion);
+  eleventyConfig.addPairedShortcode("gallery", shortcodes.insertGallery);
+  eleventyConfig.addPairedShortcode("galleryslide", shortcodes.insertGallerySlide);
+  eleventyConfig.addPairedShortcode("slide", shortcodes.insertGallerySlide);
+
+  let allCollectionItems = [];
+  eleventyConfig.addCollection("_tocItems", (collectionApi) => {
+    allCollectionItems = collectionApi.getAll();
+    return allCollectionItems;
+  });
+
+  eleventyConfig.addShortcode("toc", function (arg1, arg2) {
+    return shortcodes.insertToc.call(this, arg1, arg2, allCollectionItems);
+  });
+  eleventyConfig.addShortcode("tableofcontents", function (arg1, arg2) {
+    return shortcodes.insertToc.call(this, arg1, arg2, allCollectionItems);
+  });
 
   return {
     pathPrefix: isProduction ? PRODUCTION_DIR : '/',

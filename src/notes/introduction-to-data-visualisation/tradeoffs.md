@@ -1,6 +1,6 @@
 ---
 layout: page
-order: 3
+order: 2
 title: Tradeoffs and debates in Data Visualisation
 parent: Introduction to Data Visualisation
 eleventyComputed:

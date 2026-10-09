@@ -1,6 +1,6 @@
 ---
 layout: page
-order: 2
+order: 1
 title: Exploratory vs. Explanatory Data Visualisation
 parent: Introduction to Data Visualisation
 eleventyComputed:

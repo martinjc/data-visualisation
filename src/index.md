@@ -30,8 +30,8 @@ This is an example of extra content, it will not be included in a video summary,
 
 Some notes will also contain prompts for you to consider. Ideally, in answering these prompts you should stop to consider them and take the time to write down your thoughts. 
 
-{% panel "A prompt" "info" %}
-A prompt will look like this, and may ask some questions about the topic being discussed above. Often these questions will not necessarily have a right or wrong answer, but are asking you to form your own opinions and thoughts on an element of the module.
+{% panel "prompt" "A Prompt" %}
+A prompt will look like this, and may ask some questions about the topic being discussed above. Often these questions will not necessarily have a right or wrong answer, but are asking you to form your own opinions and thoughts on an element of the module. You will get the most out of them by stopping to consider the questions they pose, then writing down your answer.
 {% endpanel %} 
 
 One of the most important skills you will develop during these modules is the ability to reflect upon and critically evaluate visualisations. One part of developing this skill requires you to read other people's thoughts and analyses of visualisations. Another part of developing this skill requires you to get used to discussing and writing about visualisations yourself. We will do a lot of discussions during class activities. The prompts within these notes, and the associated notes that you create provide you with a non-assessed opportunity to practice this skill.
@@ -45,9 +45,4 @@ Occasionally, the notes will contain questions. These simple multiple choice que
 
 ## Contents
 
-- [Introduction to Data Visualisation](notes/introduction-to-data-visualisation/)
-  - [Exploratory vs. Explanatory Data Visualisation](notes/introduction-to-data-visualisation/exploratoryexplanatory/)
-  - [Trade-offs and Debates in Data Visualisation](notes/introduction-to-data-visualisation/tradeoffs/)
-  - [History of Data Visualisation](notes/introduction-to-data-visualisation/history/)
-
-- [Visualisation Principles](notes/visualisation-principles/)
+{% toc %}
