@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assessing Visualisations</title>
+<meta name="description" content="A skeleton template for online course notes using Eleventy.">
+<link rel="apple-touch-icon" sizes="180x180" href="/online-course-notes-11ty/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/online-course-notes-11ty/site.webmanifest">
+<meta name="theme-color" content="#d3374a">
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Assessing Visualisations">
+<meta property="og:site_name" content="Introduction to Programming">
+<meta property="og:locale" content="en_GB">
+<meta property="article:author" content="Martin Chorley">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@martinjc">
+<meta name="twitter:url" content="">
+<meta name="twitter:title" content="Assessing Visualisations">
+<link rel="icon" href="/online-course-notes-11ty/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Scope+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/online-course-notes-11ty/css/main.css">
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.css">
+<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+  <body>
+    
+<header class="max-w-6xl mx-auto mb-4 px-4">
+    <h1 class="text-3xl font-extrabold">
+        <a href="/online-course-notes-11ty/" class="text-brand hover:text-brand-dark transition-colors">
+            Assessing Visualisations
+        </a>
+    </h1>
+</header>
+<div class="max-w-6xl mx-auto px-4 flex flex-col gap-4 md:grid md:grid-cols-[280px_1fr] md:gap-8 items-start">
+    <nav class="sidebar w-full bg-card rounded-cu p-4 border border-border-line shadow-cu-sm">
+        <ul><li class="has-children"><a href="/online-course-notes-11ty/">Data Visualisation</a><ul><li class="has-children"><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/">Introduction to Data Visualisation</a><ul><li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/exploratoryexplanatory/">Exploratory vs. Explanatory Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/tradeoffs/">Tradeoffs and debates in Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/history/">Visualisation History</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/consideration/">Thinking about visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/examples/">Looking at Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/visualisationandai/">Data Visualisation and AI</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/">Visualisation Principles</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/aimsofvisualisation/">Aims of Visualisation</a></li>
+<li class="active-list-item has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/assessingvisualisations/" class="active bg-red-100 text-brand-dark font-bold hover:bg-red-200">Assessing Visualisations</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/munzner/">Munzner's Four Level Model</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationprinciples/minimalismhumanism/">Minimalism, Embellishment and Humanism</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationprinciples/principlessummary/">Principles Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualencoding/">Visual Encoding and Perception</a><ul><li><a href="/online-course-notes-11ty/notes/visualencoding/bertin/">Bertin's Visual Variables</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/gestalt/">Gestalt Principles</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/preattentive/">Preattentive Processing</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/summary/">Visual Encoding Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/databiasanddescriptives/">Data Bias and Descriptives</a><ul><li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/data/">Data and Measurement</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/bias/">Bias</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/eda/">Exploratory Data Analysis</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationtypes/">Visualisation Types and Categorisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/textualvisualisation/">Textual Data Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/dashboards/">Dashboards</a></li>
+<li><a href="/online-course-notes-11ty/notes/colour/">Colour</a></li>
+<li><a href="/online-course-notes-11ty/notes/spatial/">Spatial Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/animationandinteraction/">Animation and Interaction</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationmisuse/">Visualisation Misuse</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/about/">About</a></li></ul>
+    </nav>
+    <div class="content prose w-full min-w-0 bg-card rounded-cu p-6 md:p-8 border border-border-line shadow-cu-lg">
+        
+        
+        
+        <nav class="breadcrumb nav-tree-nav not-prose mb-6" aria-label="Page hierarchy">
+            <div class="breadcrumb-container nav-tree-container">
+                <ol class="breadcrumb-tree nav-tree">
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-0" style="--depth: 0;">
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <a href="/online-course-notes-11ty/" class="breadcrumb-link nav-tree-link">
+                                    <span class="breadcrumb-node-icon nav-tree-node-icon" aria-hidden="true">
+                                        
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                                        </svg>
+                                        
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Data Visualisation</span>
+                                </a>
+                                
+                            </div>
+                        </li>
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-1" style="--depth: 1;">
+                            
+                            <div class="breadcrumb-branch nav-tree-branch" aria-hidden="true">
+                                <svg class="breadcrumb-elbow-svg nav-tree-elbow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                                    <path d="M4 0v14a4 4 0 0 0 4 4h14"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <a href="/online-course-notes-11ty/notes/visualisationprinciples/" class="breadcrumb-link nav-tree-link">
+                                    <span class="breadcrumb-node-icon nav-tree-node-icon" aria-hidden="true">
+                                        
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                                        </svg>
+                                        
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Visualisation Principles</span>
+                                </a>
+                                
+                            </div>
+                        </li>
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-2 is-current" style="--depth: 2;">
+                            
+                            <div class="breadcrumb-branch nav-tree-branch" aria-hidden="true">
+                                <svg class="breadcrumb-elbow-svg nav-tree-elbow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                                    <path d="M4 0v14a4 4 0 0 0 4 4h14"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <span class="breadcrumb-current nav-tree-current" aria-current="page">
+                                    <span class="breadcrumb-node-icon breadcrumb-node-icon-current nav-tree-node-icon nav-tree-node-icon-current" aria-hidden="true">
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Assessing Visualisations</span>
+                                </span>
+                                
+                            </div>
+                        </li>
+                    
+                </ol>
+            </div>
+        </nav> 
+        
+        
+        <h1>Assessing Visualisations</h1>
+<p>Evaluating the efficacy of a data visualisation can be done in a few ways. We can use structured assessment frameworks to determine its quality, clarity, and utility. We can use empirical methods—such as user studies, measuring a viewer’s performance and comprehension—or we can apply a subjective, guideline-based personal reflective analysis, which is a highly practical approach for everyday assessment.</p>
+<p>The following frameworks and principles provide a systematic way to simply and effectively evaluate visualisations.</p>
+<h3>1. Guided Questioning</h3>
+<p>A foundational method for assessment is developing and ranking a core set of analytical questions. This process helps clarify what constitutes an effective graphic. Key questions to consider include:<br>
+Does the visualisation reveal more insight than a standard data table?<br>
+Are the chosen visual encodings appropriate for the data types?<br>
+Are there any misrepresentations or distortions of the data?<br>
+Is the final product user-friendly?</p>
+<details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Example: Assessing the Effectiveness of a Bar Chart</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>Here is an example of how we might approach this for a simple bar chart showing monthly sales figures for a company over a year.
+Assessing for Insight</p>
+<p>Does it reveal more than a table? Yes. A table of 12 numbers is hard to scan for trends, but the bar chart immediately shows the peak sales month (December) and the lowest (February).
+Are visual encodings appropriate? Yes. A bar chart is excellent for comparing magnitudes. The height of the bars directly corresponds to the sales value, which is a standard and effective encoding.
+Any misrepresentations? Let's assume the y-axis starts at 0. If it started at 50,000, it would be misleading. Assuming a standard baseline, this is likely accurate.
+Is it user-friendly? Yes. The bars are vertical, the text is horizontal, and the message is clear.
+This quick check suggests it's a good, standard bar chart.</p>
+  </div>
+</details>
+<h3>2. The “Friendliness” Heuristic</h3>
+<p>A significant component of a graphic’s success relies on user experience and viewer comprehension. Graphics can generally be categorized by their accessibility:</p>
+<ul>
+<li>Friendly Graphics: Utilize fully spelled-out words, horizontal text that reads naturally, and clear typography. They incorporate small explanatory annotations or call-outs, maintain simplicity to the point of rendering legends unnecessary, and utilize effective colour palettes.</li>
+<li>Unfriendly Graphics: Rely heavily on obscure abbreviations, rotated or scattered text, and lack necessary explanations. They often suffer from “chart junk” that distracts from the core data, utilize overly complex or poorly chosen colours, require large legends, and feature poor typography.</li>
+</ul>
+<p>If a visualisation exhibits predominantly “unfriendly” traits, it is highly likely that its data encodings and overall messaging are also ineffective.</p>
+<h3>3. The <a href="https://www.junkcharts.com/junk-charts-trifecta-checkup-the-definitive-guide/">Junk Charts Trifecta</a> Checkup</h3>
+<p>Developed by the Junk Charts blog, this framework evaluates the alignment of three core components:</p>
+<ul>
+<li>The Question: What is the specific purpose of the visualisation, and is it clearly answerable?</li>
+<li>The Data: What story or facts do the underlying data reveal?</li>
+<li>The Visual: What message does the chart actually convey to the viewer?<br>
+A successful visualisation aligns all three elements seamlessly; the chart should accurately reflect the data to answer the primary question.</li>
+</ul>
+<h3>4. Prescriptive Checklists</h3>
+<p>For a more granular evaluation of layout and presentation, tools like the <a href="https://stephanieevergreen.com/data-visualization-checklist/">Data Visualization Checklist</a> (developed by Stephanie Evergreen and Ann K. Emery) offer a rigid but effective methodology. This checklist provides a fast, standardized way to score the formatting and communicative power of a graphic.</p>
+<h3>5. Usability Heuristics</h3>
+<p>To perform evaluations without recruiting large user panels, evaluators use specialised heuristic sets. Building upon Jakob Nielsen’s general interface principles, Camilla Forsell and Jimmy Johansson derived a consolidated set of 10 Usability Heuristics specifically validated for Information Visualization systems (<a href="https://doi.org/10.1145/1842993.1843029">Forsell &amp; Johansson, 2010</a>):</p>
+<ol>
+<li><strong>Information Coding</strong>: Visual marks and spatial channels must accurately and intuitively map to underlying data attributes.</li>
+<li><strong>Minimalist Design</strong>: Non-essential visual elements that do not support data interpretation must be minimized.</li>
+<li><strong>Flexibility and Efficiency</strong>: The interface must support both novice spatial exploration and accelerated expert workflows.</li>
+<li><strong>Consistency and Standards</strong>: Visual idioms, color conventions, and interaction behaviors must remain uniform across all views.</li>
+<li><strong>Spatial Organization</strong>: Visual elements and visual marks must be arranged logically to leverage human spatial reasoning.</li>
+<li><strong>Visibility of System State</strong>: Interactive filtering, semantic zooming, and data queries must offer immediate visual feedback.</li>
+<li><strong>Orientation and Awareness</strong>: Multi-view or zoomed interfaces must preserve contextual awareness to prevent user disorientation.</li>
+<li><strong>Structured Actions</strong>: Complex analytical workflows must be broken into logical, step-by-step interactive stages.</li>
+<li><strong>Remove Redundancy</strong>: Redundant visual encodings should be eliminated unless deliberately used to reinforce critical signals.</li>
+<li><strong>Error Prevention and Recovery</strong>: Interactive controls must prevent invalid data states and allow seamless visual state undoing.</li>
+</ol>
+<p>However, Sheelagh Carpendale provides critical qualifications regarding heuristic inspections, noting that relying exclusively on pre-defined heuristic rules can stifle creative design innovation and fail to evaluate subjective aesthetic qualities, narrative flow, or deep domain-specific insights (<a href="https://doi.org/10.1007/978-3-540-70956-5_2">Carpendale, 2008</a>). Heuristic evaluations should therefore be combined with empirical user evaluations rather than used in isolation.</p>
+<h2>Further Reading and Sources</h2>
+<p>Developing a strong subjective eye for data visualisation requires consistent practice and exposure to expert critiques. The following resources regularly deconstruct the successes and failures of real-world graphics:</p>
+<ul>
+<li><a href="https://www.ft.com/chart-doctor">Financial Times (FT) Chart Doctor</a>: A dedicated series by the FT data journalism team analyzing both in-house visualisations and those published elsewhere.</li>
+<li><a href="https://visualisingdata.com/the-little-of-visualisation-design/">Visualising Data</a>: The Little of Visualisation Design: A recurring series by Andy Kirk that highlights the micro-level design choices—both good and bad—that impact a graphic’s effectiveness.</li>
+</ul>
+<div class="panel panel-prompt">
+<div class="panel-header"><svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg><span>Assessing Visualisations</span></div>
+<div class="panel-body"><p>Now it's time to think about how you assess visualisations personally. If you come across a visualisation for the first time, how do you approach it? Is there anything you specifically look at/for first? How do you decide whether it's a 'good' visualisation worth looking at further?</p>
+</div>
+</div>
+
+        <div class="nextprev mt-12 pt-8 border-t border-border-line flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
+                <p class="previous m-0 text-sm font-bold text-slate flex items-center gap-2">Previous:
+                    <a href="/online-course-notes-11ty/notes/visualisationprinciples/aimsofvisualisation/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Aims of Visualisation</a>
+                </p>
+            
+                <p class="next m-0 text-sm font-bold text-slate flex items-center gap-2 sm:ml-auto">Next:
+                    <a href="/online-course-notes-11ty/notes/visualisationprinciples/munzner/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Munzner&#39;s Four Level Model</a>
+                </p>
+            
+        </div>
+        <div class="comments mt-12 pt-8 border-t border-border-line">
+            <script src="https://utteranc.es/client.js" repo="martinjc/online-course-notes-11ty" issue-term="title" theme="github-light" crossorigin="anonymous" async=""></script>
+        </div>
+    </div>
+</div>
+<!-- Image Gallery Lightbox Overlay -->
+<dialog id="gallery-lightbox" class="gallery-dialog" aria-label="Enlarged Image View">
+    <div class="gallery-dialog-shell">
+        <button type="button" class="gallery-dialog-close" aria-label="Close enlarged view">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-prev" aria-label="Previous image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-next" aria-label="Next image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        <div class="gallery-dialog-content">
+            <div class="gallery-dialog-media"></div>
+            <div class="gallery-dialog-caption"></div>
+        </div>
+    </div>
+</dialog>
+
+<script>
+    // 1. Interactive Quiz Questions with click and keyboard support
+    function initInteractiveQuestions() {
+        document.querySelectorAll('.answer-block').forEach(block => {
+            const toggleAnswer = () => {
+                const feedback = block.querySelector('.feedback');
+                if (feedback) feedback.classList.toggle('hidden');
+                const isSelected = block.classList.toggle('selected');
+                block.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+            };
+
+            block.addEventListener('click', toggleAnswer);
+            block.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAnswer();
+                }
+            });
+        });
+    }
+
+    // 2. Embed & Print query param modes
+    function initEmbedAndPrintModes() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const embed = urlParams.get('embed');
+        const print = urlParams.get('print');
+        if (embed || print) {
+            const hideSelectors = ['.comments', '.sidebar', '.breadcrumb', '.nextprev'];
+            if (print) hideSelectors.push('.panoptoembed');
+            document.querySelectorAll(hideSelectors.join(', ')).forEach(el => el.classList.add('hidden'));
+        }
+    }
+
+    // 3. Image Lightbox & Galleries
+    function initLightboxAndGalleries() {
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (!lightbox) return;
+
+        const dialogMedia = lightbox.querySelector('.gallery-dialog-media');
+        const dialogCaption = lightbox.querySelector('.gallery-dialog-caption');
+        const dialogClose = lightbox.querySelector('.gallery-dialog-close');
+        const dialogPrev = lightbox.querySelector('.gallery-dialog-prev');
+        const dialogNext = lightbox.querySelector('.gallery-dialog-next');
+
+        let activeGallery = null;
+        let activeSlideIndex = 0;
+
+        function openLightboxMedia(picOrImg, captionHtml = '') {
+            const clone = picOrImg.cloneNode(true);
+
+            // Let browser select high-res responsive source in enlarged view
+            clone.querySelectorAll('source').forEach(s => s.setAttribute('sizes', '90vw'));
+            if (clone.tagName === 'IMG') {
+                clone.setAttribute('sizes', '90vw');
+            } else {
+                const img = clone.querySelector('img');
+                if (img) img.setAttribute('sizes', '90vw');
+            }
+
+            dialogMedia.innerHTML = '';
+            dialogMedia.appendChild(clone);
+
+            if (captionHtml && captionHtml.trim().length > 0) {
+                dialogCaption.innerHTML = captionHtml;
+                dialogCaption.style.display = 'block';
+            } else {
+                dialogCaption.innerHTML = '';
+                dialogCaption.style.display = 'none';
+            }
+
+            if (!lightbox.open) {
+                lightbox.showModal();
+                document.body.classList.add('lightbox-open');
+            }
+        }
+
+        function showLightboxSlide(gallery, index) {
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            if (index < 0 || index >= slides.length) return;
+
+            activeGallery = gallery;
+            activeSlideIndex = index;
+
+            const slide = slides[index];
+            const figure = slide.querySelector('figure, .figure');
+            if (!figure) return;
+
+            const picOrImg = figure.querySelector('picture, img');
+            if (!picOrImg) return;
+
+            const figcaption = figure.querySelector('figcaption, .figure-caption');
+            const captionHtml = (figcaption && figcaption.textContent.trim().length > 0) ? figcaption.innerHTML : '';
+
+            if (slides.length <= 1) {
+                if (dialogPrev) dialogPrev.style.display = 'none';
+                if (dialogNext) dialogNext.style.display = 'none';
+            } else {
+                if (dialogPrev) {
+                    dialogPrev.style.display = 'flex';
+                    dialogPrev.disabled = activeSlideIndex === 0;
+                }
+                if (dialogNext) {
+                    dialogNext.style.display = 'flex';
+                    dialogNext.disabled = activeSlideIndex === slides.length - 1;
+                }
+            }
+
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function showLightboxSingle(triggerEl) {
+            activeGallery = null;
+            if (dialogPrev) dialogPrev.style.display = 'none';
+            if (dialogNext) dialogNext.style.display = 'none';
+
+            let picOrImg = null;
+            let captionHtml = '';
+
+            if (triggerEl.tagName === 'FIGURE' || triggerEl.classList.contains('figure')) {
+                picOrImg = triggerEl.querySelector('picture, img');
+                const figcaption = triggerEl.querySelector('figcaption, .figure-caption');
+                if (figcaption && figcaption.textContent.trim().length > 0) {
+                    captionHtml = figcaption.innerHTML;
+                }
+            } else if (triggerEl.tagName === 'IMG' || triggerEl.tagName === 'PICTURE') {
+                picOrImg = triggerEl;
+                captionHtml = triggerEl.getAttribute('alt') || '';
+            } else {
+                picOrImg = triggerEl.querySelector('picture, img');
+            }
+
+            if (!picOrImg) return;
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function closeLightbox() {
+            if (lightbox.open) {
+                lightbox.close();
+                document.body.classList.remove('lightbox-open');
+                dialogMedia.innerHTML = '';
+                activeGallery = null;
+            }
+        }
+
+        if (dialogClose) {
+            dialogClose.addEventListener('click', closeLightbox);
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('gallery-dialog-shell')) {
+                closeLightbox();
+            }
+        });
+
+        lightbox.addEventListener('close', () => {
+            document.body.classList.remove('lightbox-open');
+            dialogMedia.innerHTML = '';
+            activeGallery = null;
+        });
+
+        if (dialogPrev) {
+            dialogPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery && activeSlideIndex > 0) {
+                    showLightboxSlide(activeGallery, activeSlideIndex - 1);
+                }
+            });
+        }
+
+        if (dialogNext) {
+            dialogNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery) {
+                    const slides = activeGallery.querySelectorAll('.gallery-slide');
+                    if (activeSlideIndex < slides.length - 1) {
+                        showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                    }
+                }
+            });
+        }
+
+        lightbox.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && activeGallery && activeSlideIndex > 0) {
+                e.preventDefault();
+                showLightboxSlide(activeGallery, activeSlideIndex - 1);
+            } else if (e.key === 'ArrowRight' && activeGallery) {
+                const slides = activeGallery.querySelectorAll('.gallery-slide');
+                if (activeSlideIndex < slides.length - 1) {
+                    e.preventDefault();
+                    showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                }
+            }
+        });
+
+        // Standalone images / figures outside galleries
+        document.querySelectorAll('.prose figure, .prose .figure, .prose p > img, .prose > img').forEach(el => {
+            if (el.closest('.gallery')) return;
+
+            let trigger = el;
+            if (el.tagName === 'IMG' && el.parentElement && el.parentElement.tagName === 'P' && el.parentElement.children.length === 1) {
+                trigger = el.parentElement;
+            }
+
+            const hasMedia = trigger.tagName === 'IMG' || trigger.querySelector('picture, img');
+            if (!hasMedia) return;
+
+            trigger.classList.add('lightbox-trigger');
+            trigger.setAttribute('title', 'Click to enlarge');
+            trigger.setAttribute('role', 'button');
+            trigger.setAttribute('tabindex', '0');
+            trigger.setAttribute('aria-haspopup', 'dialog');
+
+            const triggerOpen = (e) => {
+                if (e.target.closest('a')) return;
+                showLightboxSingle(trigger);
+            };
+
+            trigger.addEventListener('click', triggerOpen);
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    triggerOpen(e);
+                }
+            });
+        });
+
+        // Initialize each gallery
+        document.querySelectorAll('.gallery').forEach(gallery => {
+            const track = gallery.querySelector('.gallery-track');
+            if (!track) return;
+
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            const prevBtn = gallery.querySelector('.gallery-prev');
+            const nextBtn = gallery.querySelector('.gallery-next');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            const currentSpan = gallery.querySelector('.gallery-current');
+            const totalSlides = slides.length;
+
+            slides.forEach((slide, slideIndex) => {
+                const figure = slide.querySelector('figure, .figure');
+                if (!figure) return;
+
+                figure.classList.add('lightbox-trigger', 'gallery-lightbox-trigger');
+                figure.setAttribute('title', 'Click to enlarge');
+                figure.setAttribute('role', 'button');
+                figure.setAttribute('tabindex', '0');
+                figure.setAttribute('aria-haspopup', 'dialog');
+
+                const triggerOpen = (e) => {
+                    if (e.target.closest('a')) return;
+                    showLightboxSlide(gallery, slideIndex);
+                };
+
+                figure.addEventListener('click', triggerOpen);
+                figure.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        triggerOpen(e);
+                    }
+                });
+            });
+
+            if (totalSlides <= 1) {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                const dotsContainer = gallery.querySelector('.gallery-dots');
+                if (dotsContainer) dotsContainer.style.display = 'none';
+                return;
+            }
+
+            let currentIndex = 0;
+
+            function closeAccordions() {
+                gallery.querySelectorAll('details[open]').forEach(d => {
+                    d.removeAttribute('open');
+                });
+            }
+
+            function updateState(index) {
+                if (index < 0) index = 0;
+                if (index >= totalSlides) index = totalSlides - 1;
+                currentIndex = index;
+
+                if (currentSpan) currentSpan.textContent = currentIndex + 1;
+                if (prevBtn) prevBtn.disabled = currentIndex === 0;
+                if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
+
+                dots.forEach((dot, i) => {
+                    const isActive = i === currentIndex;
+                    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    dot.classList.toggle('active', isActive);
+                });
+            }
+
+            function scrollToSlide(index) {
+                if (index < 0 || index >= totalSlides) return;
+                if (index !== currentIndex) {
+                    closeAccordions();
+                }
+                const targetSlide = slides[index];
+                if (targetSlide) {
+                    targetSlide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+                updateState(index);
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => scrollToSlide(currentIndex - 1));
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => scrollToSlide(currentIndex + 1));
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => scrollToSlide(i));
+            });
+
+            track.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex + 1);
+                }
+            });
+
+            let scrollTimeout;
+            track.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const trackLeft = track.getBoundingClientRect().left;
+                    let closestIndex = 0;
+                    let minDiff = Infinity;
+                    slides.forEach((slide, i) => {
+                        const diff = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIndex = i;
+                        }
+                    });
+                    if (closestIndex !== currentIndex) {
+                        closeAccordions();
+                    }
+                    updateState(closestIndex);
+                }, 50);
+            }, { passive: true });
+
+            updateState(0);
+        });
+    }
+
+    // 4. Collapsible Sidebar Navigation
+    function initSidebarNav() {
+        const sidebar = document.querySelector('.sidebar');
+        if (!sidebar) return;
+
+        const rootList = sidebar.querySelector(':scope > ul');
+        if (!rootList) return;
+
+        const rootLis = rootList.querySelectorAll(':scope > li');
+        const allHasChildren = Array.from(sidebar.querySelectorAll('li.has-children'));
+        if (!allHasChildren.length) return;
+
+        // Exclude the top-level course root container if it's a single parent
+        const collapsibleLis = (rootLis.length === 1 && allHasChildren[0] === rootLis[0])
+            ? allHasChildren.slice(1)
+            : allHasChildren;
+
+        collapsibleLis.forEach((li, index) => {
+            const link = li.querySelector(':scope > a');
+            const childUl = li.querySelector(':scope > ul');
+            if (!link || !childUl) return;
+
+            childUl.classList.add('sidebar-sublist');
+            const sublistId = `sidebar-sublist-${index}`;
+            childUl.id = sublistId;
+
+            // Check if this section is currently active or contains the active page
+            const isActive = li.classList.contains('active-list-item') ||
+                             link.classList.contains('active') ||
+                             li.querySelector('.active-list-item, .active') !== null;
+
+            // Create toggle button
+            const toggleBtn = document.createElement('button');
+            toggleBtn.type = 'button';
+            toggleBtn.className = 'sidebar-toggle';
+            toggleBtn.setAttribute('aria-controls', sublistId);
+            toggleBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+            const sectionTitle = link.textContent.trim();
+            toggleBtn.setAttribute('aria-label', `${isActive ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+
+            toggleBtn.innerHTML = `
+                <svg class="sidebar-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                </svg>
+            `;
+
+            // Wrap link and toggle button in a header row
+            const headerRow = document.createElement('div');
+            headerRow.className = 'sidebar-section-header';
+            link.parentNode.insertBefore(headerRow, link);
+            headerRow.appendChild(link);
+            headerRow.appendChild(toggleBtn);
+
+            // Apply initial expanded/collapsed state
+            if (isActive) {
+                li.classList.add('is-expanded');
+                childUl.classList.remove('hidden');
+            } else {
+                li.classList.remove('is-expanded');
+                childUl.classList.add('hidden');
+            }
+
+            // Toggle on click
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const currentlyExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                const nextState = !currentlyExpanded;
+
+                toggleBtn.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+                toggleBtn.setAttribute('aria-label', `${nextState ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+                li.classList.toggle('is-expanded', nextState);
+                childUl.classList.toggle('hidden', !nextState);
+            });
+        });
+    }
+
+    // Initialize all components on page load
+    initInteractiveQuestions();
+    initEmbedAndPrintModes();
+    initLightboxAndGalleries();
+    initSidebarNav();
+</script>
+  </body>
+</html>

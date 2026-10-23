@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minimalism, Embellishment and Humanism</title>
+<meta name="description" content="A skeleton template for online course notes using Eleventy.">
+<link rel="apple-touch-icon" sizes="180x180" href="/online-course-notes-11ty/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/online-course-notes-11ty/site.webmanifest">
+<meta name="theme-color" content="#d3374a">
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Minimalism, Embellishment and Humanism">
+<meta property="og:site_name" content="Introduction to Programming">
+<meta property="og:locale" content="en_GB">
+<meta property="article:author" content="Martin Chorley">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@martinjc">
+<meta name="twitter:url" content="">
+<meta name="twitter:title" content="Minimalism, Embellishment and Humanism">
+<link rel="icon" href="/online-course-notes-11ty/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Scope+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/online-course-notes-11ty/css/main.css">
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.css">
+<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+  <body>
+    
+<header class="max-w-6xl mx-auto mb-4 px-4">
+    <h1 class="text-3xl font-extrabold">
+        <a href="/online-course-notes-11ty/" class="text-brand hover:text-brand-dark transition-colors">
+            Minimalism, Embellishment and Humanism
+        </a>
+    </h1>
+</header>
+<div class="max-w-6xl mx-auto px-4 flex flex-col gap-4 md:grid md:grid-cols-[280px_1fr] md:gap-8 items-start">
+    <nav class="sidebar w-full bg-card rounded-cu p-4 border border-border-line shadow-cu-sm">
+        <ul><li class="has-children"><a href="/online-course-notes-11ty/">Data Visualisation</a><ul><li class="has-children"><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/">Introduction to Data Visualisation</a><ul><li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/exploratoryexplanatory/">Exploratory vs. Explanatory Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/tradeoffs/">Tradeoffs and debates in Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/history/">Visualisation History</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/consideration/">Thinking about visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/examples/">Looking at Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/visualisationandai/">Data Visualisation and AI</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/">Visualisation Principles</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/aimsofvisualisation/">Aims of Visualisation</a></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/assessingvisualisations/">Assessing Visualisations</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/munzner/">Munzner's Four Level Model</a></li></ul></li>
+<li class="active-list-item"><a href="/online-course-notes-11ty/notes/visualisationprinciples/minimalismhumanism/" class="active bg-red-100 text-brand-dark font-bold hover:bg-red-200">Minimalism, Embellishment and Humanism</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationprinciples/principlessummary/">Principles Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualencoding/">Visual Encoding and Perception</a><ul><li><a href="/online-course-notes-11ty/notes/visualencoding/bertin/">Bertin's Visual Variables</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/gestalt/">Gestalt Principles</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/preattentive/">Preattentive Processing</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/summary/">Visual Encoding Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/databiasanddescriptives/">Data Bias and Descriptives</a><ul><li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/data/">Data and Measurement</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/bias/">Bias</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/eda/">Exploratory Data Analysis</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationtypes/">Visualisation Types and Categorisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/textualvisualisation/">Textual Data Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/dashboards/">Dashboards</a></li>
+<li><a href="/online-course-notes-11ty/notes/colour/">Colour</a></li>
+<li><a href="/online-course-notes-11ty/notes/spatial/">Spatial Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/animationandinteraction/">Animation and Interaction</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationmisuse/">Visualisation Misuse</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/about/">About</a></li></ul>
+    </nav>
+    <div class="content prose w-full min-w-0 bg-card rounded-cu p-6 md:p-8 border border-border-line shadow-cu-lg">
+        
+        
+        
+        <nav class="breadcrumb nav-tree-nav not-prose mb-6" aria-label="Page hierarchy">
+            <div class="breadcrumb-container nav-tree-container">
+                <ol class="breadcrumb-tree nav-tree">
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-0" style="--depth: 0;">
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <a href="/online-course-notes-11ty/" class="breadcrumb-link nav-tree-link">
+                                    <span class="breadcrumb-node-icon nav-tree-node-icon" aria-hidden="true">
+                                        
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                                        </svg>
+                                        
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Data Visualisation</span>
+                                </a>
+                                
+                            </div>
+                        </li>
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-1" style="--depth: 1;">
+                            
+                            <div class="breadcrumb-branch nav-tree-branch" aria-hidden="true">
+                                <svg class="breadcrumb-elbow-svg nav-tree-elbow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                                    <path d="M4 0v14a4 4 0 0 0 4 4h14"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <a href="/online-course-notes-11ty/notes/visualisationprinciples/" class="breadcrumb-link nav-tree-link">
+                                    <span class="breadcrumb-node-icon nav-tree-node-icon" aria-hidden="true">
+                                        
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                                        </svg>
+                                        
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Visualisation Principles</span>
+                                </a>
+                                
+                            </div>
+                        </li>
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-2 is-current" style="--depth: 2;">
+                            
+                            <div class="breadcrumb-branch nav-tree-branch" aria-hidden="true">
+                                <svg class="breadcrumb-elbow-svg nav-tree-elbow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                                    <path d="M4 0v14a4 4 0 0 0 4 4h14"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <span class="breadcrumb-current nav-tree-current" aria-current="page">
+                                    <span class="breadcrumb-node-icon breadcrumb-node-icon-current nav-tree-node-icon nav-tree-node-icon-current" aria-hidden="true">
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Minimalism, Embellishment and Humanism</span>
+                                </span>
+                                
+                            </div>
+                        </li>
+                    
+                </ol>
+            </div>
+        </nav> 
+        
+        
+        <h2>Minimalism, Embellishment and Humanism</h2>
+<p>As we are considering assessing visualisations, we can start to consider one of the key tradeoffs within data visualisation, around the level of visual embellishment that is ‘correct’ for a data visualisation.</p>
+<p>Edward Tufte’s classical visual doctrine centers on maximizing the <strong>Data-Ink Ratio</strong> — the proportion of ink devoted to the non-redundant display of data information - while ruthlessly eliminating non-essential visual elements, termed <strong>Chartjunk</strong> (<a href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">Tufte, 1983</a>). Tuftean minimalism assumes that visual clarity is strictly synonymous with sparse visual ink, and that this aids rapid understanding of data.</p>
+<p>The process of moving from excess ‘Early 90’s Excel’ style graphic to a more minimalist approach is shown in the gallery below.</p>
+<div class="gallery my-8 border border-border-line rounded-cu bg-card shadow-cu-sm overflow-hidden" role="region" aria-roledescription="carousel" aria-label="Gallery">
+  <div class="gallery-header flex items-center justify-between px-5 py-3.5 border-b border-border-line bg-card">
+    <div class="flex items-center gap-2.5 font-bold text-ink text-base">
+      <svg class="w-5 h-5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      <span>Gallery</span>
+    </div>
+    <div class="gallery-counter font-mono text-xs font-bold px-2.5 py-1 rounded-full bg-cloud text-slate">
+      <span class="gallery-current">1</span> / <span class="gallery-total">11</span>
+    </div>
+  </div>
+  <div class="gallery-track flex items-start overflow-x-auto overflow-y-visible snap-x snap-mandatory scroll-smooth no-scrollbar focus:outline-none" tabindex="0">
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/ZmYb6-6Zev-640.avif 640w, /online-course-notes-11ty/img/ZmYb6-6Zev-768.avif 768w, /online-course-notes-11ty/img/ZmYb6-6Zev-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/ZmYb6-6Zev-640.jpeg" alt="Step 0 - Initial version with chartjunk" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/ZmYb6-6Zev-640.jpeg 640w, /online-course-notes-11ty/img/ZmYb6-6Zev-768.jpeg 768w, /online-course-notes-11ty/img/ZmYb6-6Zev-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>Heavy textured linen background, bevelled &amp; embossed 3D bars, random rainbow coloring, redundant legends, thick borders, and clumsy database column labels overwhelm the chart. Over 85% of ink conveys zero data.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 14%</li>
+<li><strong>Chartjunk Erased:</strong> 0%</li>
+<li><strong>Key Issues:</strong> Heavy linen texture, 3D bevels, bar drop shadows, thick black borders, 10-player redundant legend, database field titles (<code>batsman_unique_id_name</code>, <code>total_career_runs_ipl</code>).</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/D--NzrlGHL-640.avif 640w, /online-course-notes-11ty/img/D--NzrlGHL-768.avif 768w, /online-course-notes-11ty/img/D--NzrlGHL-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/D--NzrlGHL-640.jpeg" alt="Step 1 - Remove Outer Background &amp; Frame" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/D--NzrlGHL-640.jpeg 640w, /online-course-notes-11ty/img/D--NzrlGHL-768.jpeg 768w, /online-course-notes-11ty/img/D--NzrlGHL-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>We strip away the texture and heavy outer drop-shadow box. The chart starts to feel lighter.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 21%</li>
+<li><strong>Chartjunk Erased:</strong> 15%</li>
+<li><strong>Changes:</strong> Erased heavy linen texture background from canvas; removed outer container bevel and deep drop shadow.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/9u7_i9sfXD-640.avif 640w, /online-course-notes-11ty/img/9u7_i9sfXD-768.avif 768w, /online-course-notes-11ty/img/9u7_i9sfXD-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/9u7_i9sfXD-640.jpeg" alt="Step 2 - Remove Inner Plot Background" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/9u7_i9sfXD-640.jpeg 640w, /online-course-notes-11ty/img/9u7_i9sfXD-768.jpeg 768w, /online-course-notes-11ty/img/9u7_i9sfXD-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>We remove the secondary gradient background directly behind the bars. The plot area becomes clean, improving contrast with the data marks.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 28%</li>
+<li><strong>Chartjunk Erased:</strong> 27%</li>
+<li><strong>Changes:</strong> Erased dark gradient fill inside the chart area; eliminated inner bevel emboss around the plot boundary.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/r10nILh5Xj-640.avif 640w, /online-course-notes-11ty/img/r10nILh5Xj-768.avif 768w, /online-course-notes-11ty/img/r10nILh5Xj-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/r10nILh5Xj-640.jpeg" alt="Step 3 - Remove Chart Border &amp; Perimeter Box" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/r10nILh5Xj-640.jpeg 640w, /online-course-notes-11ty/img/r10nILh5Xj-768.jpeg 768w, /online-course-notes-11ty/img/r10nILh5Xj-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>The chart perimeter was boxed in a heavy dark rectangle. Caging data marks in boxes does nothing to aid comprehension so we can remove it.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 36%</li>
+<li><strong>Chartjunk Erased:</strong> 38%</li>
+<li><strong>Changes:</strong> Removed thick outer rectangular boundary line and plot container box shadow.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/4RlFV2FLR4-640.avif 640w, /online-course-notes-11ty/img/4RlFV2FLR4-768.avif 768w, /online-course-notes-11ty/img/4RlFV2FLR4-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/4RlFV2FLR4-640.jpeg" alt="Step 4 - Flatten 3D Bevels &amp; Drop Shadows" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/4RlFV2FLR4-640.jpeg 640w, /online-course-notes-11ty/img/4RlFV2FLR4-768.jpeg 768w, /online-course-notes-11ty/img/4RlFV2FLR4-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>3D extrusion and specular shiny lighting on flat 2D bars is chartjunk. It distorts the perception of data.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 46%</li>
+<li><strong>Chartjunk Erased:</strong> 49%</li>
+<li><strong>Changes:</strong> Stripped 3D bevel and lighting filters; erased drop shadows beneath each bar. Bars flattened to accurate rectangles.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/fFKGJFR90u-640.avif 640w, /online-course-notes-11ty/img/fFKGJFR90u-768.avif 768w, /online-course-notes-11ty/img/fFKGJFR90u-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/fFKGJFR90u-640.jpeg" alt="Step 5 - Remove Heavy Bar Outlines" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/fFKGJFR90u-640.jpeg 640w, /online-course-notes-11ty/img/fFKGJFR90u-768.jpeg 768w, /online-course-notes-11ty/img/fFKGJFR90u-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>With thick borders around each bar, an ambiguous question arises: Does David Warner's run total include the 3px stroke or not? Removing outlines clarifies endpoints.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 55%</li>
+<li><strong>Chartjunk Erased:</strong> 58%</li>
+<li><strong>Changes:</strong> Removed 3px black stroke around each bar; bar length now corresponds cleanly to numeric runs without optical edge ambiguity.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/1rd6A8BIon-640.avif 640w, /online-course-notes-11ty/img/1rd6A8BIon-768.avif 768w, /online-course-notes-11ty/img/1rd6A8BIon-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/1rd6A8BIon-640.jpeg" alt="Step 6 - Remove Redundant Color Legend" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/1rd6A8BIon-640.jpeg 640w, /online-course-notes-11ty/img/1rd6A8BIon-768.jpeg 768w, /online-course-notes-11ty/img/1rd6A8BIon-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>The legend on the right repeats the exact player names already displayed on the category axis. It wastes valuable horizontal space and forces fans to bounce back and forth.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 64%</li>
+<li><strong>Chartjunk Erased:</strong> 68%</li>
+<li><strong>Changes:</strong> Eliminated redundant 10-player color legend box; expanded horizontal chart space for better run resolution.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/LWURQv3w0r-640.avif 640w, /online-course-notes-11ty/img/LWURQv3w0r-768.avif 768w, /online-course-notes-11ty/img/LWURQv3w0r-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/LWURQv3w0r-640.jpeg" alt="Step 7 - Clean Verbose Axis Titles &amp; Units" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/LWURQv3w0r-640.jpeg 640w, /online-course-notes-11ty/img/LWURQv3w0r-768.jpeg 768w, /online-course-notes-11ty/img/LWURQv3w0r-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>Raw database column names like <code>batsman_unique_id_name</code> and <code>total_career_runs_ipl</code> are stripped. The measurement unit (Runs) is cleanly stated once in the header context.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 73%</li>
+<li><strong>Chartjunk Erased:</strong> 77%</li>
+<li><strong>Changes:</strong> Erased database field names; simplified tick marks from '2,000 runs' to clean '2,000'; placed measurement context cleanly in the subtitle.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/NPQnzYlUDJ-640.avif 640w, /online-course-notes-11ty/img/NPQnzYlUDJ-768.avif 768w, /online-course-notes-11ty/img/NPQnzYlUDJ-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/NPQnzYlUDJ-640.jpeg" alt="Step 8 - Focus Colors (Semantic Highlighting)" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/NPQnzYlUDJ-640.jpeg 640w, /online-course-notes-11ty/img/NPQnzYlUDJ-768.jpeg 768w, /online-course-notes-11ty/img/NPQnzYlUDJ-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>Random rainbow colors act as distraction and do not add to understanding. We shift overseas players (David Warner, AB de Villiers, Chris Gayle) to calm neutral slate and use intentional blue to highlight domestic players who dominate 7 of the top 10.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 82%</li>
+<li><strong>Chartjunk Erased:</strong> 85%</li>
+<li><strong>Changes:</strong> Replaced 10 conflicting rainbow hues with cohesive palette; overseas players set to muted neutral slate; Indian domestic players highlighted with deliberate pre-attentive blue.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/BoGHX7ahlk-640.avif 640w, /online-course-notes-11ty/img/BoGHX7ahlk-768.avif 768w, /online-course-notes-11ty/img/BoGHX7ahlk-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/BoGHX7ahlk-640.jpeg" alt="Step 9 - Lighten Non-Data Ink &amp; Soft Hairlines" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/BoGHX7ahlk-640.jpeg 640w, /online-course-notes-11ty/img/BoGHX7ahlk-768.jpeg 768w, /online-course-notes-11ty/img/BoGHX7ahlk-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>We un-bold the aggressive 90s typography, remove text drop shadows, and soften heavy gridlines into ultra-faint hairline guides. Non-data elements retreat to the background.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 89%</li>
+<li><strong>Chartjunk Erased:</strong> 92%</li>
+<li><strong>Changes:</strong> Reduced font weights from heavy bold to readable regular weight; erased text drop shadows; heavy dark gridlines converted to ultra-faint hairline guides.</li>
+</ul>
+</div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/efJoM412Ln-640.avif 640w, /online-course-notes-11ty/img/efJoM412Ln-768.avif 768w, /online-course-notes-11ty/img/efJoM412Ln-1000.avif 1000w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/efJoM412Ln-640.jpeg" alt="Step 10 - Direct Labeling &amp; The Tufte Minimalist Chart" loading="lazy" decoding="async" width="1000" height="600" srcset="/online-course-notes-11ty/img/efJoM412Ln-640.jpeg 640w, /online-course-notes-11ty/img/efJoM412Ln-768.jpeg 768w, /online-course-notes-11ty/img/efJoM412Ln-1000.jpeg 1000w" sizes="(min-width: 30em) 30vw, 100vw"></picture></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><p>Direct labels are placed at the end of every bar (8,004 runs, 6,769 runs...), eliminating eye scanning guesswork. With direct labels in place, the X-axis line and tick marks become redundant and are completely removed.</p>
+<ul>
+<li><strong>Data-to-Ink Ratio:</strong> 95%</li>
+<li><strong>Chartjunk Erased:</strong> 100%</li>
+<li><strong>Changes:</strong> Direct values labeled right beside each bar for instant reading; eliminated entire X-axis line and tick numbers; gridlines removed as bar lengths are their own measurement. Peak Data-to-Ink ratio achieved!</li>
+</ul>
+</div>
+</div>
+  </div>
+  <div class="gallery-footer flex items-center justify-between px-5 py-3 border-t border-border-line bg-cloud">
+    <button type="button" class="gallery-prev inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border-line bg-card hover:bg-white text-ink font-semibold text-sm transition-all shadow-cu-sm hover:border-brand disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-border-line" aria-label="Previous slide">
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+      <span>Previous</span>
+    </button>
+    <div class="gallery-dots flex items-center gap-2" role="tablist" aria-label="Slides"><button type="button" class="gallery-dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-index="0"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 3" data-index="2"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 4" data-index="3"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 5" data-index="4"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 6" data-index="5"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 7" data-index="6"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 8" data-index="7"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 9" data-index="8"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 10" data-index="9"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 11" data-index="10"></button></div>
+    <button type="button" class="gallery-next inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border-line bg-card hover:bg-white text-ink font-semibold text-sm transition-all shadow-cu-sm hover:border-brand disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-border-line" aria-label="Next slide">
+      <span>Next</span>
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+    </button>
+  </div>
+</div>
+<p>However, as we have already mentioned, empirical research exists that challenges the validity of this minimalist viewpoint. Comparative studies by <a href="https://doi.org/10.1145/1753326.1753716">Bateman et al. (2010)</a> revealed that <strong>visual embellishments</strong> (“useful junk”) do not impair task interpretation speed or visual accuracy when compared to plain minimalist charts. Crucially, the presence of visual embellishments enhanced long-term chart memorability and message recall among viewers when re-tested after multi-week delays. This work looked at examples of embellished charts like the one below, created by Nigel Holmes, who <a href="https://www.johngrimwade.com/blog/2016/10/03/nigel-holmes-on-humor/">talks more here</a> about his approach to adding visual interest within visualisations.</p>
+<figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/DCfEAWFn-q-640.avif 640w, /online-course-notes-11ty/img/DCfEAWFn-q-768.avif 768w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/DCfEAWFn-q-640.jpeg" alt="a chart by Nigel Holmes" loading="lazy" decoding="async" width="768" height="850" srcset="/online-course-notes-11ty/img/DCfEAWFn-q-640.jpeg 640w, /online-course-notes-11ty/img/DCfEAWFn-q-768.jpeg 768w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">An embellished chart example by Nigel Holmes, originally published in Time magazine</figcaption></figure>
+<p>Work by <a href="https://doi.org/10.1109/TVCG.2013.234">Borkin et al. (2013)</a> further refines our understanding of <strong>chart m    emorability</strong> through large-scale eye-tracking studies and memory recognition tasks, concluding that visual features traditionally condemned by minimalist purists—such as pictorial icons, custom visual palettes, high visual density, and non-standard chart layouts—are precisely the components that trigger human <strong>visual salience</strong> and consolidate memory structures. This leads to an understanding that actually different levels of visual embellishment may have benefits and disadvantages for different audiences; minimalist designs minimise initial processing friction for expert analysts conducting rapid data lookup, whereas visual diversity and embellishment foster engagement and long-term recall in public communication contexts.</p>
+<h3>Data Humanism</h3>
+<p>Giorgia Lupi’s <strong>Data Humanism Manifesto</strong> (<a href="https://giorgialupi.com/data-humanism-my-manifesto-for-a-new-data-wold">Lupi, 2017</a>) introduces a philosophical shift away from traditional engineering-centric visualization guidelines such as the minimalist approach. Data Humanism directly critiques the assumption that data is an objective, emotionless mirror of reality. Instead, Lupi posits that data is inherently intertwined with human experience and context, emphasizing that behind every dataset lies a human story. Lupi’s approach advocates for visualizations that celebrate the complexity and richness of data, often incorporating artistic, unconventional, and narrative-driven elements to foster a deeper, more intuitive connection between people and information. This perspective underscores the importance of ethical storytelling, where designers use data not just to inform, but to inspire curiosity, empathy, and meaningful engagement with the world around us - this approach clearly invites further embellsishment of graphics and perhaps a softer, more aesthetic and human approach to visualisation design.</p>
+<figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/8keq1XqXiO-640.avif 640w, /online-course-notes-11ty/img/8keq1XqXiO-768.avif 768w, /online-course-notes-11ty/img/8keq1XqXiO-1024.avif 1024w, /online-course-notes-11ty/img/8keq1XqXiO-1366.avif 1366w, /online-course-notes-11ty/img/8keq1XqXiO-1600.avif 1600w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/8keq1XqXiO-640.jpeg" alt="a visualisation" loading="lazy" decoding="async" width="1600" height="3389" srcset="/online-course-notes-11ty/img/8keq1XqXiO-640.jpeg 640w, /online-course-notes-11ty/img/8keq1XqXiO-768.jpeg 768w, /online-course-notes-11ty/img/8keq1XqXiO-1024.jpeg 1024w, /online-course-notes-11ty/img/8keq1XqXiO-1366.jpeg 1366w, /online-course-notes-11ty/img/8keq1XqXiO-1600.jpeg 1600w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center"><a href="https://giorgialupi.com/data-humanism-my-manifesto-for-a-new-data-wold">Humanistic data visualisation</a> - Giorgia Lupi and Stefanie Posavec, <a href="https://www.dear-data.com/">Dear Data</a></figcaption></figure>
+<p>Linking in with some of the thoughts around Visualisation Rhetoric, Data Humanism promotes treating datasets as contextual, qualitative, and human-collected artifacts rather than absolute objective truths, understanding the subjective human element within data and the choices and decisions that have been made in the collection, preparation, and presentation of the data.<br>
+It suggest we <strong>Embrace Nuanced Complexity</strong>, rejecting oversimplified visual summaries in favor of rich, multi-layered visual narratives that honor complex human experiences, and quite often utilise elements such as <strong>hand-drawn elements</strong>, <strong>customised visual metaphors</strong>, and <strong>personal data tracking</strong> to bridge the emotional distance between the viewer and the underlying subjects.</p>
+<div class="panel panel-info">
+<div class="panel-header"><svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg><span>Summary</span></div>
+<div class="panel-body"><p>Ultimately, each of these visualisation approaches has its use, and understanding where and when each approach might be most appropriate is an important skill for the data visualisation practitioner to develop. More and more we'll see as we go through this module that ultimately the approach depends on the context of the visualisation - what are we trying to show, and who are we trying to show it to? Given the wide range of possible contexts and audiences for data visualisation, it makes sense that there is no single 'best' approach - rather, the 'best' approach will depend on the answers to those questions.</p>
+</div>
+</div>
+        <div class="nextprev mt-12 pt-8 border-t border-border-line flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
+                <p class="previous m-0 text-sm font-bold text-slate flex items-center gap-2">Previous:
+                    <a href="/online-course-notes-11ty/notes/visualisationprinciples/munzner/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Munzner&#39;s Four Level Model</a>
+                </p>
+            
+                <p class="next m-0 text-sm font-bold text-slate flex items-center gap-2 sm:ml-auto">Next:
+                    <a href="/online-course-notes-11ty/notes/visualisationprinciples/principlessummary/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Principles Summary</a>
+                </p>
+            
+        </div>
+        <div class="comments mt-12 pt-8 border-t border-border-line">
+            <script src="https://utteranc.es/client.js" repo="martinjc/online-course-notes-11ty" issue-term="title" theme="github-light" crossorigin="anonymous" async=""></script>
+        </div>
+    </div>
+</div>
+<!-- Image Gallery Lightbox Overlay -->
+<dialog id="gallery-lightbox" class="gallery-dialog" aria-label="Enlarged Image View">
+    <div class="gallery-dialog-shell">
+        <button type="button" class="gallery-dialog-close" aria-label="Close enlarged view">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-prev" aria-label="Previous image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-next" aria-label="Next image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        <div class="gallery-dialog-content">
+            <div class="gallery-dialog-media"></div>
+            <div class="gallery-dialog-caption"></div>
+        </div>
+    </div>
+</dialog>
+
+<script>
+    // 1. Interactive Quiz Questions with click and keyboard support
+    function initInteractiveQuestions() {
+        document.querySelectorAll('.answer-block').forEach(block => {
+            const toggleAnswer = () => {
+                const feedback = block.querySelector('.feedback');
+                if (feedback) feedback.classList.toggle('hidden');
+                const isSelected = block.classList.toggle('selected');
+                block.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+            };
+
+            block.addEventListener('click', toggleAnswer);
+            block.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAnswer();
+                }
+            });
+        });
+    }
+
+    // 2. Embed & Print query param modes
+    function initEmbedAndPrintModes() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const embed = urlParams.get('embed');
+        const print = urlParams.get('print');
+        if (embed || print) {
+            const hideSelectors = ['.comments', '.sidebar', '.breadcrumb', '.nextprev'];
+            if (print) hideSelectors.push('.panoptoembed');
+            document.querySelectorAll(hideSelectors.join(', ')).forEach(el => el.classList.add('hidden'));
+        }
+    }
+
+    // 3. Image Lightbox & Galleries
+    function initLightboxAndGalleries() {
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (!lightbox) return;
+
+        const dialogMedia = lightbox.querySelector('.gallery-dialog-media');
+        const dialogCaption = lightbox.querySelector('.gallery-dialog-caption');
+        const dialogClose = lightbox.querySelector('.gallery-dialog-close');
+        const dialogPrev = lightbox.querySelector('.gallery-dialog-prev');
+        const dialogNext = lightbox.querySelector('.gallery-dialog-next');
+
+        let activeGallery = null;
+        let activeSlideIndex = 0;
+
+        function openLightboxMedia(picOrImg, captionHtml = '') {
+            const clone = picOrImg.cloneNode(true);
+
+            // Let browser select high-res responsive source in enlarged view
+            clone.querySelectorAll('source').forEach(s => s.setAttribute('sizes', '90vw'));
+            if (clone.tagName === 'IMG') {
+                clone.setAttribute('sizes', '90vw');
+            } else {
+                const img = clone.querySelector('img');
+                if (img) img.setAttribute('sizes', '90vw');
+            }
+
+            dialogMedia.innerHTML = '';
+            dialogMedia.appendChild(clone);
+
+            if (captionHtml && captionHtml.trim().length > 0) {
+                dialogCaption.innerHTML = captionHtml;
+                dialogCaption.style.display = 'block';
+            } else {
+                dialogCaption.innerHTML = '';
+                dialogCaption.style.display = 'none';
+            }
+
+            if (!lightbox.open) {
+                lightbox.showModal();
+                document.body.classList.add('lightbox-open');
+            }
+        }
+
+        function showLightboxSlide(gallery, index) {
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            if (index < 0 || index >= slides.length) return;
+
+            activeGallery = gallery;
+            activeSlideIndex = index;
+
+            const slide = slides[index];
+            const figure = slide.querySelector('figure, .figure');
+            if (!figure) return;
+
+            const picOrImg = figure.querySelector('picture, img');
+            if (!picOrImg) return;
+
+            const figcaption = figure.querySelector('figcaption, .figure-caption');
+            const captionHtml = (figcaption && figcaption.textContent.trim().length > 0) ? figcaption.innerHTML : '';
+
+            if (slides.length <= 1) {
+                if (dialogPrev) dialogPrev.style.display = 'none';
+                if (dialogNext) dialogNext.style.display = 'none';
+            } else {
+                if (dialogPrev) {
+                    dialogPrev.style.display = 'flex';
+                    dialogPrev.disabled = activeSlideIndex === 0;
+                }
+                if (dialogNext) {
+                    dialogNext.style.display = 'flex';
+                    dialogNext.disabled = activeSlideIndex === slides.length - 1;
+                }
+            }
+
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function showLightboxSingle(triggerEl) {
+            activeGallery = null;
+            if (dialogPrev) dialogPrev.style.display = 'none';
+            if (dialogNext) dialogNext.style.display = 'none';
+
+            let picOrImg = null;
+            let captionHtml = '';
+
+            if (triggerEl.tagName === 'FIGURE' || triggerEl.classList.contains('figure')) {
+                picOrImg = triggerEl.querySelector('picture, img');
+                const figcaption = triggerEl.querySelector('figcaption, .figure-caption');
+                if (figcaption && figcaption.textContent.trim().length > 0) {
+                    captionHtml = figcaption.innerHTML;
+                }
+            } else if (triggerEl.tagName === 'IMG' || triggerEl.tagName === 'PICTURE') {
+                picOrImg = triggerEl;
+                captionHtml = triggerEl.getAttribute('alt') || '';
+            } else {
+                picOrImg = triggerEl.querySelector('picture, img');
+            }
+
+            if (!picOrImg) return;
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function closeLightbox() {
+            if (lightbox.open) {
+                lightbox.close();
+                document.body.classList.remove('lightbox-open');
+                dialogMedia.innerHTML = '';
+                activeGallery = null;
+            }
+        }
+
+        if (dialogClose) {
+            dialogClose.addEventListener('click', closeLightbox);
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('gallery-dialog-shell')) {
+                closeLightbox();
+            }
+        });
+
+        lightbox.addEventListener('close', () => {
+            document.body.classList.remove('lightbox-open');
+            dialogMedia.innerHTML = '';
+            activeGallery = null;
+        });
+
+        if (dialogPrev) {
+            dialogPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery && activeSlideIndex > 0) {
+                    showLightboxSlide(activeGallery, activeSlideIndex - 1);
+                }
+            });
+        }
+
+        if (dialogNext) {
+            dialogNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery) {
+                    const slides = activeGallery.querySelectorAll('.gallery-slide');
+                    if (activeSlideIndex < slides.length - 1) {
+                        showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                    }
+                }
+            });
+        }
+
+        lightbox.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && activeGallery && activeSlideIndex > 0) {
+                e.preventDefault();
+                showLightboxSlide(activeGallery, activeSlideIndex - 1);
+            } else if (e.key === 'ArrowRight' && activeGallery) {
+                const slides = activeGallery.querySelectorAll('.gallery-slide');
+                if (activeSlideIndex < slides.length - 1) {
+                    e.preventDefault();
+                    showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                }
+            }
+        });
+
+        // Standalone images / figures outside galleries
+        document.querySelectorAll('.prose figure, .prose .figure, .prose p > img, .prose > img').forEach(el => {
+            if (el.closest('.gallery')) return;
+
+            let trigger = el;
+            if (el.tagName === 'IMG' && el.parentElement && el.parentElement.tagName === 'P' && el.parentElement.children.length === 1) {
+                trigger = el.parentElement;
+            }
+
+            const hasMedia = trigger.tagName === 'IMG' || trigger.querySelector('picture, img');
+            if (!hasMedia) return;
+
+            trigger.classList.add('lightbox-trigger');
+            trigger.setAttribute('title', 'Click to enlarge');
+            trigger.setAttribute('role', 'button');
+            trigger.setAttribute('tabindex', '0');
+            trigger.setAttribute('aria-haspopup', 'dialog');
+
+            const triggerOpen = (e) => {
+                if (e.target.closest('a')) return;
+                showLightboxSingle(trigger);
+            };
+
+            trigger.addEventListener('click', triggerOpen);
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    triggerOpen(e);
+                }
+            });
+        });
+
+        // Initialize each gallery
+        document.querySelectorAll('.gallery').forEach(gallery => {
+            const track = gallery.querySelector('.gallery-track');
+            if (!track) return;
+
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            const prevBtn = gallery.querySelector('.gallery-prev');
+            const nextBtn = gallery.querySelector('.gallery-next');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            const currentSpan = gallery.querySelector('.gallery-current');
+            const totalSlides = slides.length;
+
+            slides.forEach((slide, slideIndex) => {
+                const figure = slide.querySelector('figure, .figure');
+                if (!figure) return;
+
+                figure.classList.add('lightbox-trigger', 'gallery-lightbox-trigger');
+                figure.setAttribute('title', 'Click to enlarge');
+                figure.setAttribute('role', 'button');
+                figure.setAttribute('tabindex', '0');
+                figure.setAttribute('aria-haspopup', 'dialog');
+
+                const triggerOpen = (e) => {
+                    if (e.target.closest('a')) return;
+                    showLightboxSlide(gallery, slideIndex);
+                };
+
+                figure.addEventListener('click', triggerOpen);
+                figure.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        triggerOpen(e);
+                    }
+                });
+            });
+
+            if (totalSlides <= 1) {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                const dotsContainer = gallery.querySelector('.gallery-dots');
+                if (dotsContainer) dotsContainer.style.display = 'none';
+                return;
+            }
+
+            let currentIndex = 0;
+
+            function closeAccordions() {
+                gallery.querySelectorAll('details[open]').forEach(d => {
+                    d.removeAttribute('open');
+                });
+            }
+
+            function updateState(index) {
+                if (index < 0) index = 0;
+                if (index >= totalSlides) index = totalSlides - 1;
+                currentIndex = index;
+
+                if (currentSpan) currentSpan.textContent = currentIndex + 1;
+                if (prevBtn) prevBtn.disabled = currentIndex === 0;
+                if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
+
+                dots.forEach((dot, i) => {
+                    const isActive = i === currentIndex;
+                    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    dot.classList.toggle('active', isActive);
+                });
+            }
+
+            function scrollToSlide(index) {
+                if (index < 0 || index >= totalSlides) return;
+                if (index !== currentIndex) {
+                    closeAccordions();
+                }
+                const targetSlide = slides[index];
+                if (targetSlide) {
+                    targetSlide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+                updateState(index);
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => scrollToSlide(currentIndex - 1));
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => scrollToSlide(currentIndex + 1));
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => scrollToSlide(i));
+            });
+
+            track.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex + 1);
+                }
+            });
+
+            let scrollTimeout;
+            track.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const trackLeft = track.getBoundingClientRect().left;
+                    let closestIndex = 0;
+                    let minDiff = Infinity;
+                    slides.forEach((slide, i) => {
+                        const diff = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIndex = i;
+                        }
+                    });
+                    if (closestIndex !== currentIndex) {
+                        closeAccordions();
+                    }
+                    updateState(closestIndex);
+                }, 50);
+            }, { passive: true });
+
+            updateState(0);
+        });
+    }
+
+    // 4. Collapsible Sidebar Navigation
+    function initSidebarNav() {
+        const sidebar = document.querySelector('.sidebar');
+        if (!sidebar) return;
+
+        const rootList = sidebar.querySelector(':scope > ul');
+        if (!rootList) return;
+
+        const rootLis = rootList.querySelectorAll(':scope > li');
+        const allHasChildren = Array.from(sidebar.querySelectorAll('li.has-children'));
+        if (!allHasChildren.length) return;
+
+        // Exclude the top-level course root container if it's a single parent
+        const collapsibleLis = (rootLis.length === 1 && allHasChildren[0] === rootLis[0])
+            ? allHasChildren.slice(1)
+            : allHasChildren;
+
+        collapsibleLis.forEach((li, index) => {
+            const link = li.querySelector(':scope > a');
+            const childUl = li.querySelector(':scope > ul');
+            if (!link || !childUl) return;
+
+            childUl.classList.add('sidebar-sublist');
+            const sublistId = `sidebar-sublist-${index}`;
+            childUl.id = sublistId;
+
+            // Check if this section is currently active or contains the active page
+            const isActive = li.classList.contains('active-list-item') ||
+                             link.classList.contains('active') ||
+                             li.querySelector('.active-list-item, .active') !== null;
+
+            // Create toggle button
+            const toggleBtn = document.createElement('button');
+            toggleBtn.type = 'button';
+            toggleBtn.className = 'sidebar-toggle';
+            toggleBtn.setAttribute('aria-controls', sublistId);
+            toggleBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+            const sectionTitle = link.textContent.trim();
+            toggleBtn.setAttribute('aria-label', `${isActive ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+
+            toggleBtn.innerHTML = `
+                <svg class="sidebar-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                </svg>
+            `;
+
+            // Wrap link and toggle button in a header row
+            const headerRow = document.createElement('div');
+            headerRow.className = 'sidebar-section-header';
+            link.parentNode.insertBefore(headerRow, link);
+            headerRow.appendChild(link);
+            headerRow.appendChild(toggleBtn);
+
+            // Apply initial expanded/collapsed state
+            if (isActive) {
+                li.classList.add('is-expanded');
+                childUl.classList.remove('hidden');
+            } else {
+                li.classList.remove('is-expanded');
+                childUl.classList.add('hidden');
+            }
+
+            // Toggle on click
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const currentlyExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                const nextState = !currentlyExpanded;
+
+                toggleBtn.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+                toggleBtn.setAttribute('aria-label', `${nextState ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+                li.classList.toggle('is-expanded', nextState);
+                childUl.classList.toggle('hidden', !nextState);
+            });
+        });
+    }
+
+    // Initialize all components on page load
+    initInteractiveQuestions();
+    initEmbedAndPrintModes();
+    initLightboxAndGalleries();
+    initSidebarNav();
+</script>
+  </body>
+</html>

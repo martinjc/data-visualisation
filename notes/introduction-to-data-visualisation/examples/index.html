@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Looking at Visualisations</title>
+<meta name="description" content="A skeleton template for online course notes using Eleventy.">
+<link rel="apple-touch-icon" sizes="180x180" href="/online-course-notes-11ty/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/online-course-notes-11ty/site.webmanifest">
+<meta name="theme-color" content="#d3374a">
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Looking at Visualisations">
+<meta property="og:site_name" content="Introduction to Programming">
+<meta property="og:locale" content="en_GB">
+<meta property="article:author" content="Martin Chorley">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@martinjc">
+<meta name="twitter:url" content="">
+<meta name="twitter:title" content="Looking at Visualisations">
+<link rel="icon" href="/online-course-notes-11ty/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Scope+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/online-course-notes-11ty/css/main.css">
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.css">
+<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+  <body>
+    
+<header class="max-w-6xl mx-auto mb-4 px-4">
+    <h1 class="text-3xl font-extrabold">
+        <a href="/online-course-notes-11ty/" class="text-brand hover:text-brand-dark transition-colors">
+            Looking at Visualisations
+        </a>
+    </h1>
+</header>
+<div class="max-w-6xl mx-auto px-4 flex flex-col gap-4 md:grid md:grid-cols-[280px_1fr] md:gap-8 items-start">
+    <nav class="sidebar w-full bg-card rounded-cu p-4 border border-border-line shadow-cu-sm">
+        <ul><li class="has-children"><a href="/online-course-notes-11ty/">Data Visualisation</a><ul><li class="has-children"><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/">Introduction to Data Visualisation</a><ul><li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/exploratoryexplanatory/">Exploratory vs. Explanatory Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/tradeoffs/">Tradeoffs and debates in Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/history/">Visualisation History</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/consideration/">Thinking about visualisation</a></li>
+<li class="active-list-item"><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/examples/" class="active bg-red-100 text-brand-dark font-bold hover:bg-red-200">Looking at Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/visualisationandai/">Data Visualisation and AI</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/">Visualisation Principles</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/aimsofvisualisation/">Aims of Visualisation</a></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/assessingvisualisations/">Assessing Visualisations</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/munzner/">Munzner's Four Level Model</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationprinciples/minimalismhumanism/">Minimalism, Embellishment and Humanism</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationprinciples/principlessummary/">Principles Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualencoding/">Visual Encoding and Perception</a><ul><li><a href="/online-course-notes-11ty/notes/visualencoding/bertin/">Bertin's Visual Variables</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/gestalt/">Gestalt Principles</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/preattentive/">Preattentive Processing</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/summary/">Visual Encoding Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/databiasanddescriptives/">Data Bias and Descriptives</a><ul><li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/data/">Data and Measurement</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/bias/">Bias</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/eda/">Exploratory Data Analysis</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationtypes/">Visualisation Types and Categorisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/textualvisualisation/">Textual Data Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/dashboards/">Dashboards</a></li>
+<li><a href="/online-course-notes-11ty/notes/colour/">Colour</a></li>
+<li><a href="/online-course-notes-11ty/notes/spatial/">Spatial Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/animationandinteraction/">Animation and Interaction</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationmisuse/">Visualisation Misuse</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/about/">About</a></li></ul>
+    </nav>
+    <div class="content prose w-full min-w-0 bg-card rounded-cu p-6 md:p-8 border border-border-line shadow-cu-lg">
+        
+        
+        
+        <nav class="breadcrumb nav-tree-nav not-prose mb-6" aria-label="Page hierarchy">
+            <div class="breadcrumb-container nav-tree-container">
+                <ol class="breadcrumb-tree nav-tree">
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-0" style="--depth: 0;">
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <a href="/online-course-notes-11ty/" class="breadcrumb-link nav-tree-link">
+                                    <span class="breadcrumb-node-icon nav-tree-node-icon" aria-hidden="true">
+                                        
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                                        </svg>
+                                        
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Data Visualisation</span>
+                                </a>
+                                
+                            </div>
+                        </li>
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-1" style="--depth: 1;">
+                            
+                            <div class="breadcrumb-branch nav-tree-branch" aria-hidden="true">
+                                <svg class="breadcrumb-elbow-svg nav-tree-elbow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                                    <path d="M4 0v14a4 4 0 0 0 4 4h14"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/" class="breadcrumb-link nav-tree-link">
+                                    <span class="breadcrumb-node-icon nav-tree-node-icon" aria-hidden="true">
+                                        
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"></path>
+                                        </svg>
+                                        
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Introduction to Data Visualisation</span>
+                                </a>
+                                
+                            </div>
+                        </li>
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-2 is-current" style="--depth: 2;">
+                            
+                            <div class="breadcrumb-branch nav-tree-branch" aria-hidden="true">
+                                <svg class="breadcrumb-elbow-svg nav-tree-elbow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                                    <path d="M4 0v14a4 4 0 0 0 4 4h14"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <span class="breadcrumb-current nav-tree-current" aria-current="page">
+                                    <span class="breadcrumb-node-icon breadcrumb-node-icon-current nav-tree-node-icon nav-tree-node-icon-current" aria-hidden="true">
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Looking at Visualisations</span>
+                                </span>
+                                
+                            </div>
+                        </li>
+                    
+                </ol>
+            </div>
+        </nav> 
+        
+        
+        <h1>Activity: Assessing Visualisations</h1>
+<p>We’ve started to think about the whys and hows of data visualisation, and in the last section we started to think about a specific visualisation in terms of what it means to us, how we can read it, how we might think about the purpose of a visualisation, and how that relates to it’s success as a graphic.</p>
+<p>We’re going to expand on that now by looking at a few more visualisations, and asking ourselves to examine the issues present within those visualisations and attempting to decide whether they are what could be considered ‘good’ or ‘bad’. Later on we’ll consider more formal methods and frameworks for evaluating visualisations, but for now we’ll be asking you to use whatever knowledge you already have, along with your own thoughts and experiences.</p>
+<div class="panel panel-prompt">
+<div class="panel-header"><svg class="panel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg><span>Starting to assess Visualisations</span></div>
+<div class="panel-body"><p>For each of these visualisations below, take a moment to look at the visualisation and decide whether you consider it a 'good' visualisation or a 'bad' visualisation. Then, take a moment to think about why you've made that decision. Don't worry if you're not sure, as we'll be spending a lot of time doing this sort of activity as we go through the module, and the more we look at visualisation theory and principles, the easier this sort of task will become. Try to assess based only on the visualisation itself, without looking at other context or information. Below each visualisation you'll find some further information to consider. Look at this once you've formed your own thoughts and ideas, and then you can see how well your thoughts match the evaluation provided. Again, don't worry if you disagree or have not spotted all the things mentioned in the evaluation.</p>
+</div>
+</div>
+<div class="gallery my-8 border border-border-line rounded-cu bg-card shadow-cu-sm overflow-hidden" role="region" aria-roledescription="carousel" aria-label="Visualisation Examples">
+  <div class="gallery-header flex items-center justify-between px-5 py-3.5 border-b border-border-line bg-card">
+    <div class="flex items-center gap-2.5 font-bold text-ink text-base">
+      <svg class="w-5 h-5 text-brand shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+      <span>Visualisation Examples</span>
+    </div>
+    <div class="gallery-counter font-mono text-xs font-bold px-2.5 py-1 rounded-full bg-cloud text-slate">
+      <span class="gallery-current">1</span> / <span class="gallery-total">13</span>
+    </div>
+  </div>
+  <div class="gallery-track flex items-start overflow-x-auto overflow-y-visible snap-x snap-mandatory scroll-smooth no-scrollbar focus:outline-none" tabindex="0">
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/EDR3TeQqmJ-640.avif 640w, /online-course-notes-11ty/img/EDR3TeQqmJ-768.avif 768w, /online-course-notes-11ty/img/EDR3TeQqmJ-1024.avif 1024w, /online-course-notes-11ty/img/EDR3TeQqmJ-1366.avif 1366w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/EDR3TeQqmJ-640.jpeg" alt="Sleep Cycles" loading="lazy" decoding="async" width="1366" height="1366" srcset="/online-course-notes-11ty/img/EDR3TeQqmJ-640.jpeg 640w, /online-course-notes-11ty/img/EDR3TeQqmJ-768.jpeg 768w, /online-course-notes-11ty/img/EDR3TeQqmJ-1024.jpeg 1024w, /online-course-notes-11ty/img/EDR3TeQqmJ-1366.jpeg 1366w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">A visualisation of sleep cycles by <a href="https://www.reddit.com/r/dataisbeautiful/comments/5l39mu/my_daughters_sleeping_patterns_for_the_first_4/">Andrew Elliott</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>This is a fun one to start with, because it is very nice to look at, or aesthetically pleasing, but is actually relatively difficult to understand as the amount of information presented alongside the visualisation is minimal. In fact, we can really only discover what it is about by reading the original Reddit thread it comes from, which, as we will see later, is something that a 'good' visualisation should not require. In this instance, the visualisation presents sleep data from the author's child, with awake phases represented in one colour, and sleep phases in another. Each ring on the circle represents a single day, so each ring represents 24 hours. With this knowledge we can start to pick out patterns in the child's sleep, and observe how it changes over time, so the visualisation starts to become more usable - however presented as it is with no legend and context it's merit is purely aesthetic, rather than informational.</p>
+<p>There is also a problem with this visualisation, in that the data representation is not consistent. Each ring on the circle represents a single day, or 24 hours. However, the circumference of each ring is not the same, so an hour on the outer ring is represented by far more pixels than an hour on the inner ring. This means that time is not represented consistently across the visualisation, and so the work required to interpret the visualisation is increased as we can not easily compare days with one another. We also experience this distortion as it gives increased prominence to the phases towards the outer edge of the circle, a phase that might only be an hour long on the outer edge is given a similar visual prominence to a phase that is three hours long further in, which can lead to a misleading interpretation of the data.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/tP6OW8TOlJ-450.avif" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/tP6OW8TOlJ-450.jpeg" alt="Gun Deaths in Florida" loading="lazy" decoding="async" width="450" height="563"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">Gun Deaths in Florida - C Chan - Reuters - 2014</figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>On the face of it, compared to the previous graphic, this looks like a good visualisation. The context is presented alongside the data, we have information on what the data is showing in both the title and subtitle, the axes are labelled and an annotation draws our attention to a key point.</p>
+<p>However, there is a problem here in that a quick surface reading of the visualisation leads us to the conclusion that gun deaths in Florida decreased after the enactment of the 'Stand your Ground' law. This is because our general understanding is that if a line goes down on a graph, the value of the data must be decreasing. In this graphic however, we note that the y-axis is inverted, and as such the visualisation is actually showing the opposite. So, the data is actually showing us the opposite - gun deaths in Florida increased after the law was enacted. However we have to pay attention to the graphic to spot this.</p>
+<p>The use of the 'blood red' colour is a strong statement for a visualisation, and we'll look at colour associations and some of the benefits and disadvantages of these later in the module.</p>
+<p>So, is this an intentionally misleading graphic, or just a misguided attempt to present data in a particular way  that has been let down by some of the details?  There's a really nice <a href="https://medium.com/@nigelmills2000/the-truth-and-lies-behind-the-infamous-blood-graph-f6d6691c3626">deep dive on this visualisation</a> that discusses this, and brings in the original graphic that this is potentially attempting to replicate.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/EXvVN9qPm8-640.avif" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/EXvVN9qPm8-640.jpeg" alt="Bute Park Visitors" loading="lazy" decoding="async" width="640" height="446"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">Cardiff Council report on Bute Park visitors ~2014</figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>This one I love because it's a really good example of how hard data visualisation is to get right, because there is <em>nothing</em> right in this visualisation. 3D exploded Pie Chart? Terrible. Misleading or hard to understand legend? Awful. Wrong choice of chart entirely? Absolutely wrong.</p>
+<p>Look, I'm not going to tell you that Pie Charts are always bad. We'll look at an argument in the next section that discusses the rights and wrongs of Pie Charts, and lays out some scenarios where Pie Charts are the right choice. But this is not one of those scenarios. Pie Charts are for &quot;part of whole&quot; comparisons, where we have 100% of something and we're looking to compare the relative size of the different parts, and where we have appropriate numbers of parts of appropriate sizes to compare. I'm not convinced, given the labelling, that we have 100% of the people interviewed here and we're showing how that 100% is made up, because that would indicate that we have people on their own who are neither adults or children, and it worries me as to who they are in that case.</p>
+<p>On top of that, the three dimensional effect and the 'explosion' of the pie chart further distort the data by giving prominence to the slices at the front of the diagram, and reducing the visual salience of the other slices. So, having picked the wrong type of visualisation in the first place, the errors are compounded by then picking the worst implementation of the wrong type of visualisation.</p>
+<p>I don't blame whoever at the council made this. I blame Microsoft Excel. But seriously, this is why the most important skill you can develop as a data visualisation practitioner is the self-reflective critical eye that allows you to look at your own work and ask 'is this right, and is it good?'. Because then when you make stuff like this you can very quickly realise the answers are 'no' and 'no', and pivot to making two separate bar charts instead.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/8vulRn3QMg-640.avif 640w, /online-course-notes-11ty/img/8vulRn3QMg-768.avif 768w, /online-course-notes-11ty/img/8vulRn3QMg-1024.avif 1024w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/8vulRn3QMg-640.jpeg" alt="Age of Death and Musical Genre" loading="lazy" decoding="async" width="1024" height="1087" srcset="/online-course-notes-11ty/img/8vulRn3QMg-640.jpeg 640w, /online-course-notes-11ty/img/8vulRn3QMg-768.jpeg 768w, /online-course-notes-11ty/img/8vulRn3QMg-1024.jpeg 1024w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center"><a href="https://theconversation.com/music-to-die-for-how-genre-affects-popular-musicians-life-expectancy-36660">Age of Death and Musical Genre</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>Oh my. This one is another fun one. Again, as with 2nd example, on the face of it all seems okay. We have a title, a subtitle, clear axes labelling. The data is readable, and unlike the 2nd example we've not inverted any axes or used any other tricks to present the data in a misleading way.</p>
+<p>However, go a little deeper, and we start to notice some issues.</p>
+<p>Firstly, lets take the lighter lines represeting US Male and Female life expectancy. These lines slowly increase across the graphic, which matches with our understanding that in general, barring some occasional dips, life expectancy has increased over the past century or so. However, what period does this actually cover? There is no axis representing time. As such we are left guessing that this is indeed presenting life expectancy for the US over a period of time, but we can't be sure - and any time we are unsure when we're reading a graphic we have a problem, and it indicates that the graphic needs further work.</p>
+<p>However, there's a couple of bigger issues here. We have average age of death of male and female musicians from different genres plotted as another line graph. Line graphs are absolutely the right choice for presenting the life expectancy over time, but absolutely the wrong choice for representing the average age of death of musicians from different genres, as that data is discrete, not continuous. Bars or another type of data representation would be more appropriate here, as we're almost suggesting that music genres lie on a linear spectrum, and the line we draw between them has some meaning, which it doesn't. (I'm completely with you - music genres definitely are a spectrum, and they overlap and intertwine and could almost certainly be represented as a four dimensional hypercube if we can calculate where folk-punk begins and alt-country ends.... but that's another module entirely.)</p>
+<p>Then we have a potentially even larger problem, and it's not necessarily with the visualisation alone, but with the data itself. This graphic tells us the story that the average age of death for artists in Rap and Hip-Hop is much lower than the average age of death in Blues and Jazz. Okay. Except ... Rap and Hip-Hop have only existed as genres for around 50 years (40 years at the time the graphic was made), while Jazz and Blues have existed for over 100 years. Any Rap/Hip-Hop artists who have died already have likely died un-naturally young, as the genre has not existed long enough for the artists in the genre to live full lives and die of natural causes at an old age. The data suffers from survivorship bias, or right censoring, in that the data for the later genres is not as complete as the data for the genres that have been around longer, and therefore comparison is much more difficult to do.</p>
+<p>This examples teaches us a few things then. As with the earlier examples, the choice of visualisation type must match the type of data you're presenting, and the message you are trying to get across. It's not enough to say 'if something has a title and axes that are correct, it must be good'. And finally, we must be able to trust our data, and be sure that our data is saying what we think it is.</p>
+<p>Again, there's another <a href="https://callingbullshit.org/case_studies/case_study_musician_mortality.html">good look at this visualisation that is worth reading</a>, and this one includes a rebuttal to the criticisms from the original author.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/PS1eidfyTB-640.avif 640w, /online-course-notes-11ty/img/PS1eidfyTB-768.avif 768w, /online-course-notes-11ty/img/PS1eidfyTB-1001.avif 1001w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/PS1eidfyTB-640.jpeg" alt="Global Carbon Emissions from Fossil Fuels" loading="lazy" decoding="async" width="1001" height="526" srcset="/online-course-notes-11ty/img/PS1eidfyTB-640.jpeg 640w, /online-course-notes-11ty/img/PS1eidfyTB-768.jpeg 768w, /online-course-notes-11ty/img/PS1eidfyTB-1001.jpeg 1001w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">Global Carbon Emissions from Fossil Fuels from the <a href="https://www.gatesnotes.com/2016-Annual-Letter?WT.mc_id=02_22_2016_00_AL2016_GL-GN_&amp;WT.tsrc=GLGN">Gates Newsletter</a>.</figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>A line chart to show continuous change over time. Title present, axes labelling. Source of data noted. Simple colour choices. Annotation on the line giving some key information. On the face of it, this is a good chart.</p>
+<p>Except ... what's going on there with the horizontal axis? We're looking at changes over time, and we start going in 20 year increments up until 1990, then jump 21 years, then start going in yearly increments! So what looks like a steep increase followed by a levelling off is anything but... it's just that the the final third of the graph shows as long a time period as a quarter of one of the previous 8 time periods.</p>
+<p>Again, this points to consistency of data representation and the distortion and misleading that occurs when we ignore consistency.</p>
+<p>Interestingly, humans aren't the only ones that can be misled by this, as we'll see in the next session.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/JzO23L8d9c-640.avif 640w, /online-course-notes-11ty/img/JzO23L8d9c-768.avif 768w, /online-course-notes-11ty/img/JzO23L8d9c-1024.avif 1024w, /online-course-notes-11ty/img/JzO23L8d9c-1366.avif 1366w, /online-course-notes-11ty/img/JzO23L8d9c-1600.avif 1600w, /online-course-notes-11ty/img/JzO23L8d9c-1920.avif 1920w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/JzO23L8d9c-640.jpeg" alt="Google Trends - Solar Eclipse" loading="lazy" decoding="async" width="1920" height="1120" srcset="/online-course-notes-11ty/img/JzO23L8d9c-640.jpeg 640w, /online-course-notes-11ty/img/JzO23L8d9c-768.jpeg 768w, /online-course-notes-11ty/img/JzO23L8d9c-1024.jpeg 1024w, /online-course-notes-11ty/img/JzO23L8d9c-1366.jpeg 1366w, /online-course-notes-11ty/img/JzO23L8d9c-1600.jpeg 1600w, /online-course-notes-11ty/img/JzO23L8d9c-1920.jpeg 1920w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">Solar Eclipse - <a href="https://www.reddit.com/r/dataisbeautiful/comments/6v8a9m/oc_my_eyes_hurt/">Oh my Eyes Hurt</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>Again, on the face of it, all the elements are present and correct here, and we're given a line chart that gives us a funny representation of data - look at the silly people staring at the sun and googling 'my eyes hurt'.</p>
+<p>Except that's not how google trends works - these two lines are actually on completely different scales - Google trends just shows you '100' as the max level for that search in that time period, and scaled everything else appropriately. So this chart could be showing us all 8.6 million people in New York City googling for 'solar eclipse' between 11 and 3, with the peak at 2:30, and just 10 people in googling for 'my eyes hurt' a little later at 3pm - but the presentation makes it look like they both had the same level of interest.</p>
+<p>Again, not necessarily Google's fault - but perhaps not the best way to represent the relative interest in these two search terms.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/SrDfMp2owT-540.avif" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/SrDfMp2owT-540.jpeg" alt="Average Male Height" loading="lazy" decoding="async" width="540" height="452"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center"><a href="https://stuffdutchpeoplelike.com/2011/10/30/tall-dutch-people/">Looking Down on the Rest of the World</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>Where to start with this one? Let's start with the racism. There's no way to spin it - using simplified cultural stereotypes to represent different nationalities is racist and unacceptable. It might look like 'fun charicatures' but it's offensive and there's no place for it in a professional data visualisation. You can use fun characters by all means, data visualisation does not have to always be a serious place (and I'm happier when it's not) but this is just plain wrong.</p>
+<p>Then we get into the technical error with the axis scaling. As with 'pie charts are bad' there are plenty of people who'll tell you that one of the clearest and hardest rules in data visualisation is that 'the y-axis must always start at 0'. However, as with pie charts, this is not always true, and there are plenty of scenarios where a y-axis starting at something other than 0 is entirely appropriate. We saw two in the earlier example about life expectancy and age of death - that visualisation had 99 problems, but an axis that didn't start at zero wasn't one (did you see what I did there?). However, in this case (and in all cases where we're using the height of a bar or anything that is acting like a bar to represent our data) it absolutely <strong>needs</strong> to start at 0. As it is, this chart is suggesting that dutch men are <strong>three</strong> times as tall as men from the Phillipines, and that just. isn't. true. The actual difference in height is a little more than 20cm, so both figures should be approximately the same size on the scale, but by not extending our y-axis down to 0 we are drastically distorting the difference.</p>
+<p>So, let's not do that?</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/kGKUxdFFEZ-640.avif 640w, /online-course-notes-11ty/img/kGKUxdFFEZ-768.avif 768w, /online-course-notes-11ty/img/kGKUxdFFEZ-1024.avif 1024w, /online-course-notes-11ty/img/kGKUxdFFEZ-1366.avif 1366w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/kGKUxdFFEZ-640.jpeg" alt="Amazon's Growth" loading="lazy" decoding="async" width="1366" height="1159" srcset="/online-course-notes-11ty/img/kGKUxdFFEZ-640.jpeg 640w, /online-course-notes-11ty/img/kGKUxdFFEZ-768.jpeg 768w, /online-course-notes-11ty/img/kGKUxdFFEZ-1024.jpeg 1024w, /online-course-notes-11ty/img/kGKUxdFFEZ-1366.jpeg 1366w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">In charts: how US retailers fared as Amazon powered ahead – Financial Times (<a href="https://www.ft.com/content/d17a1da8-cf08-11e7-b781-794ce08b24dc?syn-25a6b1a6=1">November 2017</a>)</figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>You know who makes good charts? The Financial Times makes good charts. Often they're quite complex, but that's fine because their audience can read them. They know what they're doing and who they're making visualisations for, and that means they can make things like this, where they want to get a message across and the do it with a minimum of fuss, presenting all the context and information we need to read and  understand the visualisation.</p>
+<p>Good work FT.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/ChV_cpUssk-640.avif 640w, /online-course-notes-11ty/img/ChV_cpUssk-768.avif 768w, /online-course-notes-11ty/img/ChV_cpUssk-1024.avif 1024w, /online-course-notes-11ty/img/ChV_cpUssk-1366.avif 1366w, /online-course-notes-11ty/img/ChV_cpUssk-1600.avif 1600w, /online-course-notes-11ty/img/ChV_cpUssk-1920.avif 1920w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/ChV_cpUssk-640.jpeg" alt="Federica Fragapane for La Lettura" loading="lazy" decoding="async" width="1920" height="990" srcset="/online-course-notes-11ty/img/ChV_cpUssk-640.jpeg 640w, /online-course-notes-11ty/img/ChV_cpUssk-768.jpeg 768w, /online-course-notes-11ty/img/ChV_cpUssk-1024.jpeg 1024w, /online-course-notes-11ty/img/ChV_cpUssk-1366.jpeg 1366w, /online-course-notes-11ty/img/ChV_cpUssk-1600.jpeg 1600w, /online-course-notes-11ty/img/ChV_cpUssk-1920.jpeg 1920w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center"><a href="https://www.domestika.org/en/projects/1232340-data-visualizations-for-la-lettura-corriere-della-sera">Federica Fragapane for La Lettura</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>This is an interesting example, because it starts to bring in some more of the tradeoff that we've already thought about briefly between aesthetics and simplicity. This is clearly a fairly complicated visualisation, but is also one that uses a lot of natural shapes and interesting colours to draw readers in. This visualisation was designed for an Italian newspaper, as part of one of the supplements, so is potentially targeting an audience with more time available to study the visualisation and get to grip with its complexities. Many would argue that the visualisation is not as effective as it could be, because that complexity makes it harder to understand in a short amount of time, but others would praise the data density and the fact that it has been built to be engaging and interesting to look at almost as a piece of art itself. This example highlights the subjectivity of data visualisation assessment really well - as there are valid arguments both for and against the effectiveness of this visualisation.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/eujhxi0ZQE-640.avif" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/eujhxi0ZQE-640.jpeg" alt="OpenSignal Android Fragmentation Report" loading="lazy" decoding="async" width="640" height="377"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">OpenSignal Android Fragmentation Report</figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>Here's another conflicting example. On the face of it, this looks like a messy implementation of a treemap. Unfortunately treemaps are one of those visualisation types that end up being used (like pie charts) in inappropriate circumstances. I would normally argue that if the segments on a treemap are so small that you can't reliably see labels or data values, then its probably not the right chart type to use. As we'll discuss later, they can also be hard to interpret, as we are asking people to compare 2-dimensional areas in order to assess the relative values of the data items, something which is harder to do than just comparing length for instance. However, the title of the report this visualisation comes from is &quot;OpenSignal Android Fragmentation Report&quot; and so the complexity of the treemap and the fact that there are hundreds of tiny segments is kind of the point - here the fact the visualisation is messy and complex is almost doing part of the work for us, in highlighting that the Android ecosystem (at least at the time of this report) is also messy and complex. Again, this example works well to show us that often a surface reading of the visualisation in terms of its implementation or properties is not enough to judge whether the visualisation is successful or not - it requires us to also consider the context in which the visualisation is being used, and the purpose it's trying to achieve.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/kEWYAAN8Sj-640.avif 640w, /online-course-notes-11ty/img/kEWYAAN8Sj-768.avif 768w, /online-course-notes-11ty/img/kEWYAAN8Sj-1024.avif 1024w, /online-course-notes-11ty/img/kEWYAAN8Sj-1366.avif 1366w, /online-course-notes-11ty/img/kEWYAAN8Sj-1600.avif 1600w, /online-course-notes-11ty/img/kEWYAAN8Sj-1920.avif 1920w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/kEWYAAN8Sj-640.jpeg" alt="US Immigration - National Geographic" loading="lazy" decoding="async" width="1920" height="1927" srcset="/online-course-notes-11ty/img/kEWYAAN8Sj-640.jpeg 640w, /online-course-notes-11ty/img/kEWYAAN8Sj-768.jpeg 768w, /online-course-notes-11ty/img/kEWYAAN8Sj-1024.jpeg 1024w, /online-course-notes-11ty/img/kEWYAAN8Sj-1366.jpeg 1366w, /online-course-notes-11ty/img/kEWYAAN8Sj-1600.jpeg 1600w, /online-course-notes-11ty/img/kEWYAAN8Sj-1920.jpeg 1920w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">US Immigration - <a href="https://www.nationalgeographic.com/culture/graphics/graphic-united-states-immigration-origins-rings-tree-culture">National Geographic</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>Again, a very aesthetically pleasing data visualisation, that shows a lot of data. Again, a visualisation that might be at home framed on the wall as a piece of art. And again, a visualisation that many would argue is failing in some key areas. However, this particular visualisation is actually part of an award winnning visualisation interactive concerning immigration, and what particularly appeals here is the good use of colour, and use of the circular layout that is built from the data items themselves calling back to a tree metaphor, with individual rings likened to individual years, and greater or lesser immigration from particular areas in those years resulting in larger or smaller rings. This is a metaphor that most people will understand, so that even if the chart itself is quite dense, the overall sense of the data is still conveyed quite well. As with the earlier complex examples, it is also a visualisation that can be further studied over a longer period of time to really get into the details.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/Yq5fDtn3wJ-640.avif 640w, /online-course-notes-11ty/img/Yq5fDtn3wJ-768.avif 768w, /online-course-notes-11ty/img/Yq5fDtn3wJ-1024.avif 1024w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/Yq5fDtn3wJ-640.jpeg" alt="Literacy Rates" loading="lazy" decoding="async" width="1024" height="973" srcset="/online-course-notes-11ty/img/Yq5fDtn3wJ-640.jpeg 640w, /online-course-notes-11ty/img/Yq5fDtn3wJ-768.jpeg 768w, /online-course-notes-11ty/img/Yq5fDtn3wJ-1024.jpeg 1024w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">Female and Male Literacy Rates - <a href="https://informationisbeautiful.net/beautifulnews/86-literacy-rates-equal/">Information is Beautiful</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>On the face of it, a fairly simple graphic, but one that distorts some of our common 'rules' in a way that is not particularly successful. In this case, despite the title indidicating that female and male literacy rates have almost equalised, what we see with a surface reading is that one bar rises towards the centre, while the other falls away. This is because our default Western interpretation causes us to read from left to right, so we see each bar in turn separately as an increase and a decrease. It is only with a further examination that we see the time axis on the horizontal scale at the bottom is split, with the most recent dates in the centre of the graph and historical data stretching away to the left and right - meaning that in actual fact <em>both</em> bars are rising towards the centre.</p>
+<p>Playing with this established data visualisation norm causes potential issues around misinterpretation, all in the name of creating something that is perhaps more aesthetically pleasing or more engaging to the general reader. Again, whether it is successful or not can be argued both ways, but it gives us cause to consider how important the 'rules' are, and in what ways they can be successfully broken.</p>
+  </div>
+</details></div>
+</div>
+<div class="gallery-slide snap-start shrink-0 w-full min-w-full box-border p-4 md:p-6" data-gallery-slide="" role="group" aria-roledescription="slide">
+  <figure class="figure my-6 text-center"><picture><source type="image/avif" srcset="/online-course-notes-11ty/img/2jk9j4AmV4-640.avif 640w, /online-course-notes-11ty/img/2jk9j4AmV4-768.avif 768w" sizes="(min-width: 30em) 30vw, 100vw"><img src="/online-course-notes-11ty/img/2jk9j4AmV4-640.jpeg" alt="Military Expenditure" loading="lazy" decoding="async" width="768" height="585" srcset="/online-course-notes-11ty/img/2jk9j4AmV4-640.jpeg 640w, /online-course-notes-11ty/img/2jk9j4AmV4-768.jpeg 768w" sizes="(min-width: 30em) 30vw, 100vw"></picture>
+<figcaption class="figure-caption mt-2 text-sm text-slate text-center">Top Six Countries by Military Expenditure - <a href="https://www.stlouisfed.org/on-the-economy/2023/jan/military-expenditures-how-top-spending-nations-compare">St Louis Fed</a></figcaption></figure>
+  <div class="gallery-slide-content prose max-w-full mt-4"><details class="accordion my-6 border border-border-line rounded-lg overflow-hidden bg-card shadow-cu-sm group w-full max-w-full">
+  <summary class="flex justify-between items-center px-5 py-4 font-bold text-ink cursor-pointer list-none select-none hover:bg-red-50 hover:text-brand-dark transition-colors duration-200">
+    <span>Evaluation</span>
+    <svg class="w-5 h-5 text-slate group-open:rotate-180 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="accordion-content px-6 py-5 border-t border-border-line prose overflow-x-auto w-full max-w-full">
+    <p>Finally then, another example of a visualisation that one could easily claim has been designed to deliberately mislead. A very quick surface level reading of this visualisation leads the audience (and remember, this is created by a US institution and is likely targeted at a US audience) to conclude that US military spending has fallen way behind the spending of China. Quick! we must increase the military spending before we fall even further behind!</p>
+<p>However, again, going beyond a cursory glance we can see that this is not the case. This is a dual-axis chart, and the US is the only country presented on the right-hand axis which <em>starts</em> at 400 billion dollars, a value 100 billion dollars higher than the highest value on the left-hand axis for all other countries. So in actual fact, there is no point at which US military spending has been anything less than 100 billion dollars higher than any of the other countries in this comparison, and is actually often far higher. This is an example of a chart that is <em>technically</em> correct, but one that most would argue is misleading in its presentation of the data - the use of the dual-axis chart in this way is a well known technique for making the relative differences in values appear more dramatic than they actually are.</p>
+<p>So is this visualisation successful? That depends on what your definition of success is - if you were aiming to make a misleading visualisation to rally people to your cause, this could indeed perhaps be considered successful. But should we as visualisation designers be using such techniques to achieve our aims, or should we hold ourselves to a higher moral and ethical standard regarding the truth?</p>
+  </div>
+</details></div>
+</div>
+  </div>
+  <div class="gallery-footer flex items-center justify-between px-5 py-3 border-t border-border-line bg-cloud">
+    <button type="button" class="gallery-prev inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border-line bg-card hover:bg-white text-ink font-semibold text-sm transition-all shadow-cu-sm hover:border-brand disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-border-line" aria-label="Previous slide">
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+      <span>Previous</span>
+    </button>
+    <div class="gallery-dots flex items-center gap-2" role="tablist" aria-label="Slides"><button type="button" class="gallery-dot active" role="tab" aria-selected="true" aria-label="Slide 1" data-index="0"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-index="1"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 3" data-index="2"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 4" data-index="3"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 5" data-index="4"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 6" data-index="5"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 7" data-index="6"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 8" data-index="7"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 9" data-index="8"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 10" data-index="9"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 11" data-index="10"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 12" data-index="11"></button><button type="button" class="gallery-dot" role="tab" aria-selected="false" aria-label="Slide 13" data-index="12"></button></div>
+    <button type="button" class="gallery-next inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border-line bg-card hover:bg-white text-ink font-semibold text-sm transition-all shadow-cu-sm hover:border-brand disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-border-line" aria-label="Next slide">
+      <span>Next</span>
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+    </button>
+  </div>
+</div>
+<p>What can we conclude from all of this then? Well, as we’ve seen from these examples, whether a visualisation is considered successful or not often depends on our own personal interpretation, and the extent to which our interpretation matches the creators intention, and how it relates to the context and the audience of the visualisation. Is the point of data visualisation to accurately represent the data in the simplest way possible, or is it to present the data in a way that is most likely to be interpreted in a certain way? Is it to engage with a broader audience, even if this sometimes requires simplifying the data?These are questions that we will return to later on, and consider in more detail throughout the course.</p>
+
+        <div class="nextprev mt-12 pt-8 border-t border-border-line flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
+                <p class="previous m-0 text-sm font-bold text-slate flex items-center gap-2">Previous:
+                    <a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/consideration/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Thinking about visualisation</a>
+                </p>
+            
+                <p class="next m-0 text-sm font-bold text-slate flex items-center gap-2 sm:ml-auto">Next:
+                    <a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/visualisationandai/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Data Visualisation and AI</a>
+                </p>
+            
+        </div>
+        <div class="comments mt-12 pt-8 border-t border-border-line">
+            <script src="https://utteranc.es/client.js" repo="martinjc/online-course-notes-11ty" issue-term="title" theme="github-light" crossorigin="anonymous" async=""></script>
+        </div>
+    </div>
+</div>
+<!-- Image Gallery Lightbox Overlay -->
+<dialog id="gallery-lightbox" class="gallery-dialog" aria-label="Enlarged Image View">
+    <div class="gallery-dialog-shell">
+        <button type="button" class="gallery-dialog-close" aria-label="Close enlarged view">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-prev" aria-label="Previous image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-next" aria-label="Next image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        <div class="gallery-dialog-content">
+            <div class="gallery-dialog-media"></div>
+            <div class="gallery-dialog-caption"></div>
+        </div>
+    </div>
+</dialog>
+
+<script>
+    // 1. Interactive Quiz Questions with click and keyboard support
+    function initInteractiveQuestions() {
+        document.querySelectorAll('.answer-block').forEach(block => {
+            const toggleAnswer = () => {
+                const feedback = block.querySelector('.feedback');
+                if (feedback) feedback.classList.toggle('hidden');
+                const isSelected = block.classList.toggle('selected');
+                block.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+            };
+
+            block.addEventListener('click', toggleAnswer);
+            block.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAnswer();
+                }
+            });
+        });
+    }
+
+    // 2. Embed & Print query param modes
+    function initEmbedAndPrintModes() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const embed = urlParams.get('embed');
+        const print = urlParams.get('print');
+        if (embed || print) {
+            const hideSelectors = ['.comments', '.sidebar', '.breadcrumb', '.nextprev'];
+            if (print) hideSelectors.push('.panoptoembed');
+            document.querySelectorAll(hideSelectors.join(', ')).forEach(el => el.classList.add('hidden'));
+        }
+    }
+
+    // 3. Image Lightbox & Galleries
+    function initLightboxAndGalleries() {
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (!lightbox) return;
+
+        const dialogMedia = lightbox.querySelector('.gallery-dialog-media');
+        const dialogCaption = lightbox.querySelector('.gallery-dialog-caption');
+        const dialogClose = lightbox.querySelector('.gallery-dialog-close');
+        const dialogPrev = lightbox.querySelector('.gallery-dialog-prev');
+        const dialogNext = lightbox.querySelector('.gallery-dialog-next');
+
+        let activeGallery = null;
+        let activeSlideIndex = 0;
+
+        function openLightboxMedia(picOrImg, captionHtml = '') {
+            const clone = picOrImg.cloneNode(true);
+
+            // Let browser select high-res responsive source in enlarged view
+            clone.querySelectorAll('source').forEach(s => s.setAttribute('sizes', '90vw'));
+            if (clone.tagName === 'IMG') {
+                clone.setAttribute('sizes', '90vw');
+            } else {
+                const img = clone.querySelector('img');
+                if (img) img.setAttribute('sizes', '90vw');
+            }
+
+            dialogMedia.innerHTML = '';
+            dialogMedia.appendChild(clone);
+
+            if (captionHtml && captionHtml.trim().length > 0) {
+                dialogCaption.innerHTML = captionHtml;
+                dialogCaption.style.display = 'block';
+            } else {
+                dialogCaption.innerHTML = '';
+                dialogCaption.style.display = 'none';
+            }
+
+            if (!lightbox.open) {
+                lightbox.showModal();
+                document.body.classList.add('lightbox-open');
+            }
+        }
+
+        function showLightboxSlide(gallery, index) {
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            if (index < 0 || index >= slides.length) return;
+
+            activeGallery = gallery;
+            activeSlideIndex = index;
+
+            const slide = slides[index];
+            const figure = slide.querySelector('figure, .figure');
+            if (!figure) return;
+
+            const picOrImg = figure.querySelector('picture, img');
+            if (!picOrImg) return;
+
+            const figcaption = figure.querySelector('figcaption, .figure-caption');
+            const captionHtml = (figcaption && figcaption.textContent.trim().length > 0) ? figcaption.innerHTML : '';
+
+            if (slides.length <= 1) {
+                if (dialogPrev) dialogPrev.style.display = 'none';
+                if (dialogNext) dialogNext.style.display = 'none';
+            } else {
+                if (dialogPrev) {
+                    dialogPrev.style.display = 'flex';
+                    dialogPrev.disabled = activeSlideIndex === 0;
+                }
+                if (dialogNext) {
+                    dialogNext.style.display = 'flex';
+                    dialogNext.disabled = activeSlideIndex === slides.length - 1;
+                }
+            }
+
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function showLightboxSingle(triggerEl) {
+            activeGallery = null;
+            if (dialogPrev) dialogPrev.style.display = 'none';
+            if (dialogNext) dialogNext.style.display = 'none';
+
+            let picOrImg = null;
+            let captionHtml = '';
+
+            if (triggerEl.tagName === 'FIGURE' || triggerEl.classList.contains('figure')) {
+                picOrImg = triggerEl.querySelector('picture, img');
+                const figcaption = triggerEl.querySelector('figcaption, .figure-caption');
+                if (figcaption && figcaption.textContent.trim().length > 0) {
+                    captionHtml = figcaption.innerHTML;
+                }
+            } else if (triggerEl.tagName === 'IMG' || triggerEl.tagName === 'PICTURE') {
+                picOrImg = triggerEl;
+                captionHtml = triggerEl.getAttribute('alt') || '';
+            } else {
+                picOrImg = triggerEl.querySelector('picture, img');
+            }
+
+            if (!picOrImg) return;
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function closeLightbox() {
+            if (lightbox.open) {
+                lightbox.close();
+                document.body.classList.remove('lightbox-open');
+                dialogMedia.innerHTML = '';
+                activeGallery = null;
+            }
+        }
+
+        if (dialogClose) {
+            dialogClose.addEventListener('click', closeLightbox);
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('gallery-dialog-shell')) {
+                closeLightbox();
+            }
+        });
+
+        lightbox.addEventListener('close', () => {
+            document.body.classList.remove('lightbox-open');
+            dialogMedia.innerHTML = '';
+            activeGallery = null;
+        });
+
+        if (dialogPrev) {
+            dialogPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery && activeSlideIndex > 0) {
+                    showLightboxSlide(activeGallery, activeSlideIndex - 1);
+                }
+            });
+        }
+
+        if (dialogNext) {
+            dialogNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery) {
+                    const slides = activeGallery.querySelectorAll('.gallery-slide');
+                    if (activeSlideIndex < slides.length - 1) {
+                        showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                    }
+                }
+            });
+        }
+
+        lightbox.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && activeGallery && activeSlideIndex > 0) {
+                e.preventDefault();
+                showLightboxSlide(activeGallery, activeSlideIndex - 1);
+            } else if (e.key === 'ArrowRight' && activeGallery) {
+                const slides = activeGallery.querySelectorAll('.gallery-slide');
+                if (activeSlideIndex < slides.length - 1) {
+                    e.preventDefault();
+                    showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                }
+            }
+        });
+
+        // Standalone images / figures outside galleries
+        document.querySelectorAll('.prose figure, .prose .figure, .prose p > img, .prose > img').forEach(el => {
+            if (el.closest('.gallery')) return;
+
+            let trigger = el;
+            if (el.tagName === 'IMG' && el.parentElement && el.parentElement.tagName === 'P' && el.parentElement.children.length === 1) {
+                trigger = el.parentElement;
+            }
+
+            const hasMedia = trigger.tagName === 'IMG' || trigger.querySelector('picture, img');
+            if (!hasMedia) return;
+
+            trigger.classList.add('lightbox-trigger');
+            trigger.setAttribute('title', 'Click to enlarge');
+            trigger.setAttribute('role', 'button');
+            trigger.setAttribute('tabindex', '0');
+            trigger.setAttribute('aria-haspopup', 'dialog');
+
+            const triggerOpen = (e) => {
+                if (e.target.closest('a')) return;
+                showLightboxSingle(trigger);
+            };
+
+            trigger.addEventListener('click', triggerOpen);
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    triggerOpen(e);
+                }
+            });
+        });
+
+        // Initialize each gallery
+        document.querySelectorAll('.gallery').forEach(gallery => {
+            const track = gallery.querySelector('.gallery-track');
+            if (!track) return;
+
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            const prevBtn = gallery.querySelector('.gallery-prev');
+            const nextBtn = gallery.querySelector('.gallery-next');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            const currentSpan = gallery.querySelector('.gallery-current');
+            const totalSlides = slides.length;
+
+            slides.forEach((slide, slideIndex) => {
+                const figure = slide.querySelector('figure, .figure');
+                if (!figure) return;
+
+                figure.classList.add('lightbox-trigger', 'gallery-lightbox-trigger');
+                figure.setAttribute('title', 'Click to enlarge');
+                figure.setAttribute('role', 'button');
+                figure.setAttribute('tabindex', '0');
+                figure.setAttribute('aria-haspopup', 'dialog');
+
+                const triggerOpen = (e) => {
+                    if (e.target.closest('a')) return;
+                    showLightboxSlide(gallery, slideIndex);
+                };
+
+                figure.addEventListener('click', triggerOpen);
+                figure.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        triggerOpen(e);
+                    }
+                });
+            });
+
+            if (totalSlides <= 1) {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                const dotsContainer = gallery.querySelector('.gallery-dots');
+                if (dotsContainer) dotsContainer.style.display = 'none';
+                return;
+            }
+
+            let currentIndex = 0;
+
+            function closeAccordions() {
+                gallery.querySelectorAll('details[open]').forEach(d => {
+                    d.removeAttribute('open');
+                });
+            }
+
+            function updateState(index) {
+                if (index < 0) index = 0;
+                if (index >= totalSlides) index = totalSlides - 1;
+                currentIndex = index;
+
+                if (currentSpan) currentSpan.textContent = currentIndex + 1;
+                if (prevBtn) prevBtn.disabled = currentIndex === 0;
+                if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
+
+                dots.forEach((dot, i) => {
+                    const isActive = i === currentIndex;
+                    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    dot.classList.toggle('active', isActive);
+                });
+            }
+
+            function scrollToSlide(index) {
+                if (index < 0 || index >= totalSlides) return;
+                if (index !== currentIndex) {
+                    closeAccordions();
+                }
+                const targetSlide = slides[index];
+                if (targetSlide) {
+                    targetSlide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+                updateState(index);
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => scrollToSlide(currentIndex - 1));
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => scrollToSlide(currentIndex + 1));
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => scrollToSlide(i));
+            });
+
+            track.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex + 1);
+                }
+            });
+
+            let scrollTimeout;
+            track.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const trackLeft = track.getBoundingClientRect().left;
+                    let closestIndex = 0;
+                    let minDiff = Infinity;
+                    slides.forEach((slide, i) => {
+                        const diff = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIndex = i;
+                        }
+                    });
+                    if (closestIndex !== currentIndex) {
+                        closeAccordions();
+                    }
+                    updateState(closestIndex);
+                }, 50);
+            }, { passive: true });
+
+            updateState(0);
+        });
+    }
+
+    // 4. Collapsible Sidebar Navigation
+    function initSidebarNav() {
+        const sidebar = document.querySelector('.sidebar');
+        if (!sidebar) return;
+
+        const rootList = sidebar.querySelector(':scope > ul');
+        if (!rootList) return;
+
+        const rootLis = rootList.querySelectorAll(':scope > li');
+        const allHasChildren = Array.from(sidebar.querySelectorAll('li.has-children'));
+        if (!allHasChildren.length) return;
+
+        // Exclude the top-level course root container if it's a single parent
+        const collapsibleLis = (rootLis.length === 1 && allHasChildren[0] === rootLis[0])
+            ? allHasChildren.slice(1)
+            : allHasChildren;
+
+        collapsibleLis.forEach((li, index) => {
+            const link = li.querySelector(':scope > a');
+            const childUl = li.querySelector(':scope > ul');
+            if (!link || !childUl) return;
+
+            childUl.classList.add('sidebar-sublist');
+            const sublistId = `sidebar-sublist-${index}`;
+            childUl.id = sublistId;
+
+            // Check if this section is currently active or contains the active page
+            const isActive = li.classList.contains('active-list-item') ||
+                             link.classList.contains('active') ||
+                             li.querySelector('.active-list-item, .active') !== null;
+
+            // Create toggle button
+            const toggleBtn = document.createElement('button');
+            toggleBtn.type = 'button';
+            toggleBtn.className = 'sidebar-toggle';
+            toggleBtn.setAttribute('aria-controls', sublistId);
+            toggleBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+            const sectionTitle = link.textContent.trim();
+            toggleBtn.setAttribute('aria-label', `${isActive ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+
+            toggleBtn.innerHTML = `
+                <svg class="sidebar-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                </svg>
+            `;
+
+            // Wrap link and toggle button in a header row
+            const headerRow = document.createElement('div');
+            headerRow.className = 'sidebar-section-header';
+            link.parentNode.insertBefore(headerRow, link);
+            headerRow.appendChild(link);
+            headerRow.appendChild(toggleBtn);
+
+            // Apply initial expanded/collapsed state
+            if (isActive) {
+                li.classList.add('is-expanded');
+                childUl.classList.remove('hidden');
+            } else {
+                li.classList.remove('is-expanded');
+                childUl.classList.add('hidden');
+            }
+
+            // Toggle on click
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const currentlyExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                const nextState = !currentlyExpanded;
+
+                toggleBtn.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+                toggleBtn.setAttribute('aria-label', `${nextState ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+                li.classList.toggle('is-expanded', nextState);
+                childUl.classList.toggle('hidden', !nextState);
+            });
+        });
+    }
+
+    // Initialize all components on page load
+    initInteractiveQuestions();
+    initEmbedAndPrintModes();
+    initLightboxAndGalleries();
+    initSidebarNav();
+</script>
+  </body>
+</html>

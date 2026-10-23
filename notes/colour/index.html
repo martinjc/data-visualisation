@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colour</title>
+<meta name="description" content="A skeleton template for online course notes using Eleventy.">
+<link rel="apple-touch-icon" sizes="180x180" href="/online-course-notes-11ty/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/online-course-notes-11ty/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/online-course-notes-11ty/site.webmanifest">
+<meta name="theme-color" content="#d3374a">
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Colour">
+<meta property="og:site_name" content="Introduction to Programming">
+<meta property="og:locale" content="en_GB">
+<meta property="article:author" content="Martin Chorley">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@martinjc">
+<meta name="twitter:url" content="">
+<meta name="twitter:title" content="Colour">
+<link rel="icon" href="/online-course-notes-11ty/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Scope+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/online-course-notes-11ty/css/main.css">
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.css">
+<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+  <body>
+    
+<header class="max-w-6xl mx-auto mb-4 px-4">
+    <h1 class="text-3xl font-extrabold">
+        <a href="/online-course-notes-11ty/" class="text-brand hover:text-brand-dark transition-colors">
+            Colour
+        </a>
+    </h1>
+</header>
+<div class="max-w-6xl mx-auto px-4 flex flex-col gap-4 md:grid md:grid-cols-[280px_1fr] md:gap-8 items-start">
+    <nav class="sidebar w-full bg-card rounded-cu p-4 border border-border-line shadow-cu-sm">
+        <ul><li class="has-children"><a href="/online-course-notes-11ty/">Data Visualisation</a><ul><li class="has-children"><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/">Introduction to Data Visualisation</a><ul><li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/exploratoryexplanatory/">Exploratory vs. Explanatory Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/tradeoffs/">Tradeoffs and debates in Data Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/history/">Visualisation History</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/consideration/">Thinking about visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/examples/">Looking at Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/introduction-to-data-visualisation/visualisationandai/">Data Visualisation and AI</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/">Visualisation Principles</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/aimsofvisualisation/">Aims of Visualisation</a></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualisationprinciples/assessingvisualisations/">Assessing Visualisations</a><ul><li><a href="/online-course-notes-11ty/notes/visualisationprinciples/munzner/">Munzner's Four Level Model</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationprinciples/minimalismhumanism/">Minimalism, Embellishment and Humanism</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationprinciples/principlessummary/">Principles Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/visualencoding/">Visual Encoding and Perception</a><ul><li><a href="/online-course-notes-11ty/notes/visualencoding/bertin/">Bertin's Visual Variables</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/gestalt/">Gestalt Principles</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/preattentive/">Preattentive Processing</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualencoding/summary/">Visual Encoding Summary</a></li></ul></li>
+<li class="has-children"><a href="/online-course-notes-11ty/notes/databiasanddescriptives/">Data Bias and Descriptives</a><ul><li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/data/">Data and Measurement</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/bias/">Bias</a></li>
+<li><a href="/online-course-notes-11ty/notes/databiasanddescriptives/eda/">Exploratory Data Analysis</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationtypes/">Visualisation Types and Categorisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/textualvisualisation/">Textual Data Visualisations</a></li>
+<li><a href="/online-course-notes-11ty/notes/dashboards/">Dashboards</a></li>
+<li class="active-list-item"><a href="/online-course-notes-11ty/notes/colour/" class="active bg-red-100 text-brand-dark font-bold hover:bg-red-200">Colour</a></li>
+<li><a href="/online-course-notes-11ty/notes/spatial/">Spatial Visualisation</a></li>
+<li><a href="/online-course-notes-11ty/notes/animationandinteraction/">Animation and Interaction</a></li>
+<li><a href="/online-course-notes-11ty/notes/visualisationmisuse/">Visualisation Misuse</a></li></ul></li>
+<li><a href="/online-course-notes-11ty/about/">About</a></li></ul>
+    </nav>
+    <div class="content prose w-full min-w-0 bg-card rounded-cu p-6 md:p-8 border border-border-line shadow-cu-lg">
+        
+        
+        
+        <nav class="breadcrumb nav-tree-nav not-prose mb-6" aria-label="Page hierarchy">
+            <div class="breadcrumb-container nav-tree-container">
+                <ol class="breadcrumb-tree nav-tree">
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-0" style="--depth: 0;">
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <a href="/online-course-notes-11ty/" class="breadcrumb-link nav-tree-link">
+                                    <span class="breadcrumb-node-icon nav-tree-node-icon" aria-hidden="true">
+                                        
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                                        </svg>
+                                        
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Data Visualisation</span>
+                                </a>
+                                
+                            </div>
+                        </li>
+                    
+                        
+                        
+                        <li class="breadcrumb-step nav-tree-step depth-1 is-current" style="--depth: 1;">
+                            
+                            <div class="breadcrumb-branch nav-tree-branch" aria-hidden="true">
+                                <svg class="breadcrumb-elbow-svg nav-tree-elbow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="none">
+                                    <path d="M4 0v14a4 4 0 0 0 4 4h14"></path>
+                                </svg>
+                            </div>
+                            
+                            <div class="breadcrumb-node nav-tree-node">
+                                
+                                <span class="breadcrumb-current nav-tree-current" aria-current="page">
+                                    <span class="breadcrumb-node-icon breadcrumb-node-icon-current nav-tree-node-icon nav-tree-node-icon-current" aria-hidden="true">
+                                        <svg viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="breadcrumb-title nav-tree-title">Colour</span>
+                                </span>
+                                
+                            </div>
+                        </li>
+                    
+                </ol>
+            </div>
+        </nav> 
+        
+        
+        
+        <div class="nextprev mt-12 pt-8 border-t border-border-line flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center">
+                <p class="previous m-0 text-sm font-bold text-slate flex items-center gap-2">Previous:
+                    <a href="/online-course-notes-11ty/notes/dashboards/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Dashboards</a>
+                </p>
+            
+                <p class="next m-0 text-sm font-bold text-slate flex items-center gap-2 sm:ml-auto">Next:
+                    <a href="/online-course-notes-11ty/notes/spatial/" class="inline-flex items-center px-5 py-2.5 bg-card border border-border-line rounded-full text-brand shadow-cu-sm font-bold hover:bg-red-50 hover:border-brand hover:text-brand-dark hover:-translate-y-0.5 hover:shadow-md transition-all active:translate-y-0">Spatial Visualisation</a>
+                </p>
+            
+        </div>
+        <div class="comments mt-12 pt-8 border-t border-border-line">
+            <script src="https://utteranc.es/client.js" repo="martinjc/online-course-notes-11ty" issue-term="title" theme="github-light" crossorigin="anonymous" async=""></script>
+        </div>
+    </div>
+</div>
+<!-- Image Gallery Lightbox Overlay -->
+<dialog id="gallery-lightbox" class="gallery-dialog" aria-label="Enlarged Image View">
+    <div class="gallery-dialog-shell">
+        <button type="button" class="gallery-dialog-close" aria-label="Close enlarged view">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-prev" aria-label="Previous image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button type="button" class="gallery-dialog-nav gallery-dialog-next" aria-label="Next image">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        <div class="gallery-dialog-content">
+            <div class="gallery-dialog-media"></div>
+            <div class="gallery-dialog-caption"></div>
+        </div>
+    </div>
+</dialog>
+
+<script>
+    // 1. Interactive Quiz Questions with click and keyboard support
+    function initInteractiveQuestions() {
+        document.querySelectorAll('.answer-block').forEach(block => {
+            const toggleAnswer = () => {
+                const feedback = block.querySelector('.feedback');
+                if (feedback) feedback.classList.toggle('hidden');
+                const isSelected = block.classList.toggle('selected');
+                block.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+            };
+
+            block.addEventListener('click', toggleAnswer);
+            block.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAnswer();
+                }
+            });
+        });
+    }
+
+    // 2. Embed & Print query param modes
+    function initEmbedAndPrintModes() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const embed = urlParams.get('embed');
+        const print = urlParams.get('print');
+        if (embed || print) {
+            const hideSelectors = ['.comments', '.sidebar', '.breadcrumb', '.nextprev'];
+            if (print) hideSelectors.push('.panoptoembed');
+            document.querySelectorAll(hideSelectors.join(', ')).forEach(el => el.classList.add('hidden'));
+        }
+    }
+
+    // 3. Image Lightbox & Galleries
+    function initLightboxAndGalleries() {
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (!lightbox) return;
+
+        const dialogMedia = lightbox.querySelector('.gallery-dialog-media');
+        const dialogCaption = lightbox.querySelector('.gallery-dialog-caption');
+        const dialogClose = lightbox.querySelector('.gallery-dialog-close');
+        const dialogPrev = lightbox.querySelector('.gallery-dialog-prev');
+        const dialogNext = lightbox.querySelector('.gallery-dialog-next');
+
+        let activeGallery = null;
+        let activeSlideIndex = 0;
+
+        function openLightboxMedia(picOrImg, captionHtml = '') {
+            const clone = picOrImg.cloneNode(true);
+
+            // Let browser select high-res responsive source in enlarged view
+            clone.querySelectorAll('source').forEach(s => s.setAttribute('sizes', '90vw'));
+            if (clone.tagName === 'IMG') {
+                clone.setAttribute('sizes', '90vw');
+            } else {
+                const img = clone.querySelector('img');
+                if (img) img.setAttribute('sizes', '90vw');
+            }
+
+            dialogMedia.innerHTML = '';
+            dialogMedia.appendChild(clone);
+
+            if (captionHtml && captionHtml.trim().length > 0) {
+                dialogCaption.innerHTML = captionHtml;
+                dialogCaption.style.display = 'block';
+            } else {
+                dialogCaption.innerHTML = '';
+                dialogCaption.style.display = 'none';
+            }
+
+            if (!lightbox.open) {
+                lightbox.showModal();
+                document.body.classList.add('lightbox-open');
+            }
+        }
+
+        function showLightboxSlide(gallery, index) {
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            if (index < 0 || index >= slides.length) return;
+
+            activeGallery = gallery;
+            activeSlideIndex = index;
+
+            const slide = slides[index];
+            const figure = slide.querySelector('figure, .figure');
+            if (!figure) return;
+
+            const picOrImg = figure.querySelector('picture, img');
+            if (!picOrImg) return;
+
+            const figcaption = figure.querySelector('figcaption, .figure-caption');
+            const captionHtml = (figcaption && figcaption.textContent.trim().length > 0) ? figcaption.innerHTML : '';
+
+            if (slides.length <= 1) {
+                if (dialogPrev) dialogPrev.style.display = 'none';
+                if (dialogNext) dialogNext.style.display = 'none';
+            } else {
+                if (dialogPrev) {
+                    dialogPrev.style.display = 'flex';
+                    dialogPrev.disabled = activeSlideIndex === 0;
+                }
+                if (dialogNext) {
+                    dialogNext.style.display = 'flex';
+                    dialogNext.disabled = activeSlideIndex === slides.length - 1;
+                }
+            }
+
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function showLightboxSingle(triggerEl) {
+            activeGallery = null;
+            if (dialogPrev) dialogPrev.style.display = 'none';
+            if (dialogNext) dialogNext.style.display = 'none';
+
+            let picOrImg = null;
+            let captionHtml = '';
+
+            if (triggerEl.tagName === 'FIGURE' || triggerEl.classList.contains('figure')) {
+                picOrImg = triggerEl.querySelector('picture, img');
+                const figcaption = triggerEl.querySelector('figcaption, .figure-caption');
+                if (figcaption && figcaption.textContent.trim().length > 0) {
+                    captionHtml = figcaption.innerHTML;
+                }
+            } else if (triggerEl.tagName === 'IMG' || triggerEl.tagName === 'PICTURE') {
+                picOrImg = triggerEl;
+                captionHtml = triggerEl.getAttribute('alt') || '';
+            } else {
+                picOrImg = triggerEl.querySelector('picture, img');
+            }
+
+            if (!picOrImg) return;
+            openLightboxMedia(picOrImg, captionHtml);
+        }
+
+        function closeLightbox() {
+            if (lightbox.open) {
+                lightbox.close();
+                document.body.classList.remove('lightbox-open');
+                dialogMedia.innerHTML = '';
+                activeGallery = null;
+            }
+        }
+
+        if (dialogClose) {
+            dialogClose.addEventListener('click', closeLightbox);
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('gallery-dialog-shell')) {
+                closeLightbox();
+            }
+        });
+
+        lightbox.addEventListener('close', () => {
+            document.body.classList.remove('lightbox-open');
+            dialogMedia.innerHTML = '';
+            activeGallery = null;
+        });
+
+        if (dialogPrev) {
+            dialogPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery && activeSlideIndex > 0) {
+                    showLightboxSlide(activeGallery, activeSlideIndex - 1);
+                }
+            });
+        }
+
+        if (dialogNext) {
+            dialogNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (activeGallery) {
+                    const slides = activeGallery.querySelectorAll('.gallery-slide');
+                    if (activeSlideIndex < slides.length - 1) {
+                        showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                    }
+                }
+            });
+        }
+
+        lightbox.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && activeGallery && activeSlideIndex > 0) {
+                e.preventDefault();
+                showLightboxSlide(activeGallery, activeSlideIndex - 1);
+            } else if (e.key === 'ArrowRight' && activeGallery) {
+                const slides = activeGallery.querySelectorAll('.gallery-slide');
+                if (activeSlideIndex < slides.length - 1) {
+                    e.preventDefault();
+                    showLightboxSlide(activeGallery, activeSlideIndex + 1);
+                }
+            }
+        });
+
+        // Standalone images / figures outside galleries
+        document.querySelectorAll('.prose figure, .prose .figure, .prose p > img, .prose > img').forEach(el => {
+            if (el.closest('.gallery')) return;
+
+            let trigger = el;
+            if (el.tagName === 'IMG' && el.parentElement && el.parentElement.tagName === 'P' && el.parentElement.children.length === 1) {
+                trigger = el.parentElement;
+            }
+
+            const hasMedia = trigger.tagName === 'IMG' || trigger.querySelector('picture, img');
+            if (!hasMedia) return;
+
+            trigger.classList.add('lightbox-trigger');
+            trigger.setAttribute('title', 'Click to enlarge');
+            trigger.setAttribute('role', 'button');
+            trigger.setAttribute('tabindex', '0');
+            trigger.setAttribute('aria-haspopup', 'dialog');
+
+            const triggerOpen = (e) => {
+                if (e.target.closest('a')) return;
+                showLightboxSingle(trigger);
+            };
+
+            trigger.addEventListener('click', triggerOpen);
+            trigger.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    triggerOpen(e);
+                }
+            });
+        });
+
+        // Initialize each gallery
+        document.querySelectorAll('.gallery').forEach(gallery => {
+            const track = gallery.querySelector('.gallery-track');
+            if (!track) return;
+
+            const slides = gallery.querySelectorAll('.gallery-slide');
+            const prevBtn = gallery.querySelector('.gallery-prev');
+            const nextBtn = gallery.querySelector('.gallery-next');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            const currentSpan = gallery.querySelector('.gallery-current');
+            const totalSlides = slides.length;
+
+            slides.forEach((slide, slideIndex) => {
+                const figure = slide.querySelector('figure, .figure');
+                if (!figure) return;
+
+                figure.classList.add('lightbox-trigger', 'gallery-lightbox-trigger');
+                figure.setAttribute('title', 'Click to enlarge');
+                figure.setAttribute('role', 'button');
+                figure.setAttribute('tabindex', '0');
+                figure.setAttribute('aria-haspopup', 'dialog');
+
+                const triggerOpen = (e) => {
+                    if (e.target.closest('a')) return;
+                    showLightboxSlide(gallery, slideIndex);
+                };
+
+                figure.addEventListener('click', triggerOpen);
+                figure.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        triggerOpen(e);
+                    }
+                });
+            });
+
+            if (totalSlides <= 1) {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+                const dotsContainer = gallery.querySelector('.gallery-dots');
+                if (dotsContainer) dotsContainer.style.display = 'none';
+                return;
+            }
+
+            let currentIndex = 0;
+
+            function closeAccordions() {
+                gallery.querySelectorAll('details[open]').forEach(d => {
+                    d.removeAttribute('open');
+                });
+            }
+
+            function updateState(index) {
+                if (index < 0) index = 0;
+                if (index >= totalSlides) index = totalSlides - 1;
+                currentIndex = index;
+
+                if (currentSpan) currentSpan.textContent = currentIndex + 1;
+                if (prevBtn) prevBtn.disabled = currentIndex === 0;
+                if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
+
+                dots.forEach((dot, i) => {
+                    const isActive = i === currentIndex;
+                    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    dot.classList.toggle('active', isActive);
+                });
+            }
+
+            function scrollToSlide(index) {
+                if (index < 0 || index >= totalSlides) return;
+                if (index !== currentIndex) {
+                    closeAccordions();
+                }
+                const targetSlide = slides[index];
+                if (targetSlide) {
+                    targetSlide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                }
+                updateState(index);
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => scrollToSlide(currentIndex - 1));
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => scrollToSlide(currentIndex + 1));
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => scrollToSlide(i));
+            });
+
+            track.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    scrollToSlide(currentIndex + 1);
+                }
+            });
+
+            let scrollTimeout;
+            track.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const trackLeft = track.getBoundingClientRect().left;
+                    let closestIndex = 0;
+                    let minDiff = Infinity;
+                    slides.forEach((slide, i) => {
+                        const diff = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+                        if (diff < minDiff) {
+                            minDiff = diff;
+                            closestIndex = i;
+                        }
+                    });
+                    if (closestIndex !== currentIndex) {
+                        closeAccordions();
+                    }
+                    updateState(closestIndex);
+                }, 50);
+            }, { passive: true });
+
+            updateState(0);
+        });
+    }
+
+    // 4. Collapsible Sidebar Navigation
+    function initSidebarNav() {
+        const sidebar = document.querySelector('.sidebar');
+        if (!sidebar) return;
+
+        const rootList = sidebar.querySelector(':scope > ul');
+        if (!rootList) return;
+
+        const rootLis = rootList.querySelectorAll(':scope > li');
+        const allHasChildren = Array.from(sidebar.querySelectorAll('li.has-children'));
+        if (!allHasChildren.length) return;
+
+        // Exclude the top-level course root container if it's a single parent
+        const collapsibleLis = (rootLis.length === 1 && allHasChildren[0] === rootLis[0])
+            ? allHasChildren.slice(1)
+            : allHasChildren;
+
+        collapsibleLis.forEach((li, index) => {
+            const link = li.querySelector(':scope > a');
+            const childUl = li.querySelector(':scope > ul');
+            if (!link || !childUl) return;
+
+            childUl.classList.add('sidebar-sublist');
+            const sublistId = `sidebar-sublist-${index}`;
+            childUl.id = sublistId;
+
+            // Check if this section is currently active or contains the active page
+            const isActive = li.classList.contains('active-list-item') ||
+                             link.classList.contains('active') ||
+                             li.querySelector('.active-list-item, .active') !== null;
+
+            // Create toggle button
+            const toggleBtn = document.createElement('button');
+            toggleBtn.type = 'button';
+            toggleBtn.className = 'sidebar-toggle';
+            toggleBtn.setAttribute('aria-controls', sublistId);
+            toggleBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+            const sectionTitle = link.textContent.trim();
+            toggleBtn.setAttribute('aria-label', `${isActive ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+
+            toggleBtn.innerHTML = `
+                <svg class="sidebar-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                </svg>
+            `;
+
+            // Wrap link and toggle button in a header row
+            const headerRow = document.createElement('div');
+            headerRow.className = 'sidebar-section-header';
+            link.parentNode.insertBefore(headerRow, link);
+            headerRow.appendChild(link);
+            headerRow.appendChild(toggleBtn);
+
+            // Apply initial expanded/collapsed state
+            if (isActive) {
+                li.classList.add('is-expanded');
+                childUl.classList.remove('hidden');
+            } else {
+                li.classList.remove('is-expanded');
+                childUl.classList.add('hidden');
+            }
+
+            // Toggle on click
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const currentlyExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                const nextState = !currentlyExpanded;
+
+                toggleBtn.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+                toggleBtn.setAttribute('aria-label', `${nextState ? 'Collapse' : 'Expand'} ${sectionTitle} subtopics`);
+                li.classList.toggle('is-expanded', nextState);
+                childUl.classList.toggle('hidden', !nextState);
+            });
+        });
+    }
+
+    // Initialize all components on page load
+    initInteractiveQuestions();
+    initEmbedAndPrintModes();
+    initLightboxAndGalleries();
+    initSidebarNav();
+</script>
+  </body>
+</html>
