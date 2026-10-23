@@ -134,7 +134,7 @@ Good work FT.
 {% galleryslide "src/img/introduction-to-data-visualisation/examples/vis12.png", "Federica Fragapane for La Lettura" "[Federica Fragapane for La Lettura](https://www.domestika.org/en/projects/1232340-data-visualizations-for-la-lettura-corriere-della-sera)" %}
 
 {% accordion "Evaluation"%}
-This is an interesting example, because it starts to bring in some more of the tradeoff that we've already thought about briefly between aesthetics and simplicity.
+This is an interesting example, because it starts to bring in some more of the tradeoff that we've already thought about briefly between aesthetics and simplicity. This is clearly a fairly complicated visualisation, but is also one that uses a lot of natural shapes and interesting colours to draw readers in. This visualisation was designed for an Italian newspaper, as part of one of the supplements, so is potentially targeting an audience with more time available to study the visualisation and get to grip with its complexities. Many would argue that the visualisation is not as effective as it could be, because that complexity makes it harder to understand in a short amount of time, but others would praise the data density and the fact that it has been built to be engaging and interesting to look at almost as a piece of art itself. This example highlights the subjectivity of data visualisation assessment really well - as there are valid arguments both for and against the effectiveness of this visualisation.
 {% endaccordion %}
 {% endgalleryslide %}
 
@@ -143,7 +143,7 @@ This is an interesting example, because it starts to bring in some more of the t
 {% galleryslide "src/img/introduction-to-data-visualisation/examples/vis15.png", "OpenSignal Android Fragmentation Report" "OpenSignal Android Fragmentation Report" %}
 
 {% accordion "Evaluation"%}
-
+Here's another conflicting example. On the face of it, this looks like a messy implementation of a treemap. Unfortunately treemaps are one of those visualisation types that end up being used (like pie charts) in inappropriate circumstances. I would normally argue that if the segments on a treemap are so small that you can't reliably see labels or data values, then its probably not the right chart type to use. As we'll discuss later, they can also be hard to interpret, as we are asking people to compare 2-dimensional areas in order to assess the relative values of the data items, something which is harder to do than just comparing length for instance. However, the title of the report this visualisation comes from is "OpenSignal Android Fragmentation Report" and so the complexity of the treemap and the fact that there are hundreds of tiny segments is kind of the point - here the fact the visualisation is messy and complex is almost doing part of the work for us, in highlighting that the Android ecosystem (at least at the time of this report) is also messy and complex. Again, this example works well to show us that often a surface reading of the visualisation in terms of its implementation or properties is not enough to judge whether the visualisation is successful or not - it requires us to also consider the context in which the visualisation is being used, and the purpose it's trying to achieve.
 {% endaccordion %}
 {% endgalleryslide %}
 
@@ -151,7 +151,7 @@ This is an interesting example, because it starts to bring in some more of the t
 {% galleryslide "src/img/introduction-to-data-visualisation/examples/vis17.png", "US Immigration - National Geographic" "US Immigration - [National Geographic](https://www.nationalgeographic.com/culture/graphics/graphic-united-states-immigration-origins-rings-tree-culture)" %}
 
 {% accordion "Evaluation"%}
-
+Again, a very aesthetically pleasing data visualisation, that shows a lot of data. Again, a visualisation that might be at home framed on the wall as a piece of art. And again, a visualisation that many would argue is failing in some key areas. However, this particular visualisation is actually part of an award winnning visualisation interactive concerning immigration, and what particularly appeals here is the good use of colour, and use of the circular layout that is built from the data items themselves calling back to a tree metaphor, with individual rings likened to individual years, and greater or lesser immigration from particular areas in those years resulting in larger or smaller rings. This is a metaphor that most people will understand, so that even if the chart itself is quite dense, the overall sense of the data is still conveyed quite well. As with the earlier complex examples, it is also a visualisation that can be further studied over a longer period of time to really get into the details.
 {% endaccordion %}
 {% endgalleryslide %}
 
@@ -159,7 +159,9 @@ This is an interesting example, because it starts to bring in some more of the t
 {% galleryslide "src/img/introduction-to-data-visualisation/examples/vis18.png", "Literacy Rates" "Female and Male Literacy Rates - [Information is Beautiful](https://informationisbeautiful.net/beautifulnews/86-literacy-rates-equal/)" %}
 
 {% accordion "Evaluation"%}
+On the face of it, a fairly simple graphic, but one that distorts some of our common 'rules' in a way that is not particularly successful. In this case, despite the title indidicating that female and male literacy rates have almost equalised, what we see with a surface reading is that one bar rises towards the centre, while the other falls away. This is because our default Western interpretation causes us to read from left to right, so we see each bar in turn separately as an increase and a decrease. It is only with a further examination that we see the time axis on the horizontal scale at the bottom is split, with the most recent dates in the centre of the graph and historical data stretching away to the left and right - meaning that in actual fact _both_ bars are rising towards the centre.
 
+Playing with this established data visualisation norm causes potential issues around misinterpretation, all in the name of creating something that is perhaps more aesthetically pleasing or more engaging to the general reader. Again, whether it is successful or not can be argued both ways, but it gives us cause to consider how important the 'rules' are, and in what ways they can be successfully broken.
 {% endaccordion %}
 {% endgalleryslide %}
 
@@ -167,7 +169,11 @@ This is an interesting example, because it starts to bring in some more of the t
 {% galleryslide "src/img/introduction-to-data-visualisation/examples/vis19.png", "Military Expenditure" "Top Six Countries by Military Expenditure - [St Louis Fed](https://www.stlouisfed.org/on-the-economy/2023/jan/military-expenditures-how-top-spending-nations-compare)" %}
 
 {% accordion "Evaluation"%}
+Finally then, another example of a visualisation that one could easily claim has been designed to deliberately mislead. A very quick surface level reading of this visualisation leads the audience (and remember, this is created by a US institution and is likely targeted at a US audience) to conclude that US military spending has fallen way behind the spending of China. Quick! we must increase the military spending before we fall even further behind!
 
+However, again, going beyond a cursory glance we can see that this is not the case. This is a dual-axis chart, and the US is the only country presented on the right-hand axis which _starts_ at 400 billion dollars, a value 100 billion dollars higher than the highest value on the left-hand axis for all other countries. So in actual fact, there is no point at which US military spending has been anything less than 100 billion dollars higher than any of the other countries in this comparison, and is actually often far higher. This is an example of a chart that is _technically_ correct, but one that most would argue is misleading in its presentation of the data - the use of the dual-axis chart in this way is a well known technique for making the relative differences in values appear more dramatic than they actually are.  
+
+So is this visualisation successful? That depends on what your definition of success is - if you were aiming to make a misleading visualisation to rally people to your cause, this could indeed perhaps be considered successful. But should we as visualisation designers be using such techniques to achieve our aims, or should we hold ourselves to a higher moral and ethical standard regarding the truth?
 {% endaccordion %}
 {% endgalleryslide %}
 
@@ -175,4 +181,4 @@ This is an interesting example, because it starts to bring in some more of the t
 {% endgallery %}
 
 
-
+What can we conclude from all of this then? Well, as we've seen from these examples, whether a visualisation is considered successful or not often depends on our own personal interpretation, and the extent to which our interpretation matches the creators intention, and how it relates to the context and the audience of the visualisation. Is the point of data visualisation to accurately represent the data in the simplest way possible, or is it to present the data in a way that is most likely to be interpreted in a certain way? Is it to engage with a broader audience, even if this sometimes requires simplifying the data?These are questions that we will return to later on, and consider in more detail throughout the course. 

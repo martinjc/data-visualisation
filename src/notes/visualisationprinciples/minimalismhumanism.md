@@ -23,17 +23,17 @@ The process of moving from excess 'Early 90's Excel' style graphic to a more min
 
 {% galleryslide "src/img/visualisation-principles/step_00.png", "Step 0 - Initial version with chartjunk" %}
 
-Heavy textured linen background, bevel & emboss 3D bars, random rainbow coloring, redundant legends, thick borders, and clumsy database column labels overwhelm the cricket fan. Over 85% of ink conveys zero data.
+Heavy textured linen background, bevelled & embossed 3D bars, random rainbow coloring, redundant legends, thick borders, and clumsy database column labels overwhelm the chart. Over 85% of ink conveys zero data.
 
 - **Data-to-Ink Ratio:** 14%
 - **Chartjunk Erased:** 0%
-- **Key Issues:** Heavy linen texture, 3D specular bevels, bar drop shadows, thick black borders, 10-player redundant legend, database field titles (`batsman_unique_id_name`, `total_career_runs_ipl`).
+- **Key Issues:** Heavy linen texture, 3D bevels, bar drop shadows, thick black borders, 10-player redundant legend, database field titles (`batsman_unique_id_name`, `total_career_runs_ipl`).
 {% endgalleryslide %}
 
 {% galleryslide "src/img/visualisation-principles/step_01.png", "Step 1 - Remove Outer Background & Frame" %}
 
 
-We strip away the faux-linen texture and heavy outer drop-shadow box. Notice that absolutely no cricket data is lost, and the chart instantly feels less muddy.
+We strip away the texture and heavy outer drop-shadow box. The chart starts to feel lighter.
 
 - **Data-to-Ink Ratio:** 21%
 - **Chartjunk Erased:** 15%
@@ -44,7 +44,7 @@ We strip away the faux-linen texture and heavy outer drop-shadow box. Notice tha
 {% galleryslide "src/img/visualisation-principles/step_02.png", "Step 2 - Remove Inner Plot Background" %}
 
 
-We remove the secondary gradient background directly behind the batting bars. The plot area becomes clean, drastically improving contrast with the data marks.
+We remove the secondary gradient background directly behind the bars. The plot area becomes clean, improving contrast with the data marks.
 
 - **Data-to-Ink Ratio:** 28%
 - **Chartjunk Erased:** 27%
@@ -55,7 +55,7 @@ We remove the secondary gradient background directly behind the batting bars. Th
 {% galleryslide "src/img/visualisation-principles/step_03.png", "Step 3 - Remove Chart Border & Perimeter Box" %}
 
 
-The chart perimeter was boxed in a heavy dark rectangle. Caging data marks in boxes does nothing to aid comprehension—it only fences in the viewer's vision.
+The chart perimeter was boxed in a heavy dark rectangle. Caging data marks in boxes does nothing to aid comprehension so we can remove it.
 
 - **Data-to-Ink Ratio:** 36%
 - **Chartjunk Erased:** 38%
@@ -66,18 +66,18 @@ The chart perimeter was boxed in a heavy dark rectangle. Caging data marks in bo
 {% galleryslide "src/img/visualisation-principles/step_04.png", "Step 4 - Flatten 3D Bevels & Drop Shadows" %}
 
 
-3D extrusion and specular shiny lighting on flat 2D run totals is classic chartjunk. It distorts the perception of batting totals and casts misleading drop shadows.
+3D extrusion and specular shiny lighting on flat 2D bars is chartjunk. It distorts the perception of data.
 
 - **Data-to-Ink Ratio:** 46%
 - **Chartjunk Erased:** 49%
-- **Changes:** Stripped SVG 3D bevel and specular lighting filters; erased drop shadows beneath each bar. Bars flattened to accurate geometric rectangles.
+- **Changes:** Stripped 3D bevel and lighting filters; erased drop shadows beneath each bar. Bars flattened to accurate rectangles.
 
 {% endgalleryslide %}
 
 {% galleryslide "src/img/visualisation-principles/step_05.png", "Step 5 - Remove Heavy Bar Outlines" %}
 
 
-With thick borders around each bar, an ambiguous question arises: Does David Warner's run total include the 3px stroke or not? Removing outlines clarifies exact endpoints.
+With thick borders around each bar, an ambiguous question arises: Does David Warner's run total include the 3px stroke or not? Removing outlines clarifies endpoints.
 
 - **Data-to-Ink Ratio:** 55%
 - **Chartjunk Erased:** 58%
@@ -110,11 +110,11 @@ Raw database column names like `batsman_unique_id_name` and `total_career_runs_i
 {% galleryslide "src/img/visualisation-principles/step_08.png", "Step 8 - Focus Colors (Semantic Highlighting)" %}
 
 
-Random rainbow colors act as confectionery distraction. We shift overseas legends (David Warner, AB de Villiers, Chris Gayle) to calm neutral slate and use intentional blue to highlight domestic Indian batsmen who dominate 7 of the top 10.
+Random rainbow colors act as distraction and do not add to understanding. We shift overseas players (David Warner, AB de Villiers, Chris Gayle) to calm neutral slate and use intentional blue to highlight domestic players who dominate 7 of the top 10.
 
 - **Data-to-Ink Ratio:** 82%
 - **Chartjunk Erased:** 85%
-- **Changes:** Replaced 10 conflicting rainbow hues with cohesive palette; overseas batsmen set to muted neutral slate; Indian domestic batsmen highlighted with deliberate pre-attentive blue.
+- **Changes:** Replaced 10 conflicting rainbow hues with cohesive palette; overseas players set to muted neutral slate; Indian domestic players highlighted with deliberate pre-attentive blue.
 
 {% endgalleryslide %}
 
